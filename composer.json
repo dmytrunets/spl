@@ -34,6 +34,8 @@
 
         "avalanche123/imagine-bundle": "dev-master",
 
+        "kachkaev/assets-version-bundle": "1.0.x-dev",
+
         "evercodelab/evercode-page-bundle": "dev-master"
         
     },

@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Evercode\Bundle\PageBundle\EvercodePageBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+            new Kachkaev\AssetsVersionBundle\KachkaevAssetsVersionBundle(),
             
             new App\DefaultBundle\AppDefaultBundle(),
             new App\UserBundle\AppUserBundle(),

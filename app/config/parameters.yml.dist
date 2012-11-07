@@ -1,4 +1,5 @@
 parameters:
+    assets_version:    v1
     database_driver:   pdo_mysql
     database_host:     localhost
     database_port:     ~
