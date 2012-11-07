@@ -6,7 +6,7 @@ web/uploads/*
 web/compiled/*
 vendor
 composer.phar
-app/config/parameters.ini
+app/config/parameters.yml
 *.php~
 *.orig
 .idea
