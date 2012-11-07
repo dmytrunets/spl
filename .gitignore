@@ -1,0 +1,16 @@
+app/cache/*
+app/logs/*
+app/*.cache
+web/bundles/*
+web/uploads/*
+web/compiled/*
+vendor
+composer.phar
+app/config/parameters.ini
+*.php~
+*.orig
+.idea
+.DS_Store
+php-cs-fixer.phar
+bin/behat*
+composer.lock
