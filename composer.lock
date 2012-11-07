@@ -1,5 +1,5 @@
 {
-    "hash": "50a644226f6c4ee32bfd9a92c9e69f0a",
+    "hash": "0e72a63240e044575f253dd356ec6ff5",
     "packages": [
         {
             "name": "doctrine/common",
@@ -1591,6 +1591,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "sonata-project/admin-bundle": 20,
-        "sonata-project/doctrine-orm-admin-bundle": 20
+        "sonata-project/doctrine-orm-admin-bundle": 20,
+        "knplabs/knp-menu-bundle": 20
     }
 }
