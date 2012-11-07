@@ -28,7 +28,9 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-
+            new Evercode\Bundle\PageBundle\EvercodePageBundle(),
+            new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+            
             new App\DefaultBundle\AppDefaultBundle(),
             new App\UserBundle\AppUserBundle(),
         );
