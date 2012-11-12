@@ -13,4 +13,3 @@ app/config/parameters.yml
 .DS_Store
 php-cs-fixer.phar
 bin/behat*
-composer.lock
