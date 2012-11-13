@@ -1,5 +1,5 @@
 {
-    "hash": "a49a3992f205c628fc193e1390ef5a95",
+    "hash": "d066484d6fb36e8c61bfaf2dbe6e8ea7",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -880,6 +880,48 @@
             "keywords": [
                 "page"
             ]
+        },
+        {
+            "name": "fabpot/php-cs-fixer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
+                "reference": "24df86b1a29a9f6151e495615123308542bcfb05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/fabpot/PHP-CS-Fixer/archive/24df86b1a29a9f6151e495615123308542bcfb05.zip",
+                "reference": "24df86b1a29a9f6151e495615123308542bcfb05",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "2.1.*",
+                "symfony/filesystem": "2.1.*",
+                "symfony/finder": "2.1.*",
+                "php": ">=5.3.3"
+            },
+            "time": "1349504510",
+            "bin": [
+                "php-cs-fixer"
+            ],
+            "type": "application",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\CS": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A script to automatically fix Symfony Coding Standard"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -2301,12 +2343,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "7b4a27893a92496d0a4e8700c6cc62abf154e726"
+                "reference": "2d488b79f2e46bfff057c73081a8e5c426b712a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/archive/7b4a27893a92496d0a4e8700c6cc62abf154e726.zip",
-                "reference": "7b4a27893a92496d0a4e8700c6cc62abf154e726",
+                "url": "https://github.com/symfony/symfony/archive/2d488b79f2e46bfff057c73081a8e5c426b712a7.zip",
+                "reference": "2d488b79f2e46bfff057c73081a8e5c426b712a7",
                 "shasum": ""
             },
             "require": {
@@ -2355,7 +2397,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1352810944",
+            "time": "1352824146",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2502,6 +2544,7 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "avalanche123/imagine-bundle": 20,
         "kachkaev/assets-version-bundle": 20,
-        "evercodelab/evercode-page-bundle": 20
+        "evercodelab/evercode-page-bundle": 20,
+        "fabpot/php-cs-fixer": 20
     }
 }

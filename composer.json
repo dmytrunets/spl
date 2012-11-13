@@ -42,7 +42,9 @@
 
         "kachkaev/assets-version-bundle": "1.0.x-dev",
 
-        "evercodelab/evercode-page-bundle": "dev-master"
+        "evercodelab/evercode-page-bundle": "dev-master",
+
+        "fabpot/php-cs-fixer": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

@@ -6,11 +6,8 @@ web/uploads/*
 web/compiled/*
 vendor
 composer.phar
-*.php~
-*.orig
-.idea
-.DS_Store
 php-cs-fixer.phar
 bin/behat*
 !bin/behat_run
 bin/doctrine*
+bin/php-cs-fixer
