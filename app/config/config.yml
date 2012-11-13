@@ -78,3 +78,9 @@ avalanche_imagine:
     cache_prefix: uploads/cache
 
 kachkaev_assets_version: ~
+
+stof_doctrine_extensions:
+    default_locale: %locale%
+    orm:
+        default:
+            timestampable: true

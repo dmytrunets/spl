@@ -44,3 +44,9 @@ fos_user_change_password:
 _imagine:
     resource: .
     type:     imagine
+
+
+EvercodePageBundle:
+    resource: "@EvercodePageBundle/Controller/"
+    type:     annotation
+    prefix:   /

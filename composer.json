@@ -44,7 +44,8 @@
 
         "evercodelab/evercode-page-bundle": "dev-master",
 
-        "fabpot/php-cs-fixer": "dev-master"
+        "fabpot/php-cs-fixer": "dev-master",
+        "stof/doctrine-extensions-bundle": "1.1.x-dev"
     },
     "scripts": {
         "post-install-cmd": [

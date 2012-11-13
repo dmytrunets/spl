@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new Evercode\Bundle\PageBundle\EvercodePageBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Kachkaev\AssetsVersionBundle\KachkaevAssetsVersionBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             
             new App\DefaultBundle\AppDefaultBundle(),
             new App\UserBundle\AppUserBundle(),
