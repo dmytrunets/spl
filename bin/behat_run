@@ -1,0 +1,11 @@
+#!/bin/sh
+
+result=0
+for dir in src/App/*/Features
+do
+    dir=${dir%*/Features}
+    echo Testing App${dir##*/}
+    ./bin/behat -c app/config/behat.yml --ansi @App${dir##*/}
+    [ $? -ne 0 ] && result=1
+done
+exit $result

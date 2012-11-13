@@ -1,5 +1,5 @@
 {
-    "hash": "fc4f1927f7a78753d7c74099387a3852",
+    "hash": "a49a3992f205c628fc193e1390ef5a95",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -50,21 +50,21 @@
         },
         {
             "name": "behat/behat",
-            "version": "v2.4.0",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "git://github.com/Behat/Behat.git",
-                "reference": "v2.4.0"
+                "reference": "v2.4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Behat/Behat/zipball/v2.4.0",
-                "reference": "v2.4.0",
+                "url": "https://github.com/Behat/Behat/zipball/v2.4.4",
+                "reference": "v2.4.4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
-                "behat/gherkin": ">=2.2.0,<2.3.0-dev",
+                "behat/gherkin": ">=2.2.4,<2.3.0-dev",
                 "symfony/console": ">=2.0.0,<2.2.0-dev",
                 "symfony/config": ">=2.0.0,<2.2.0-dev",
                 "symfony/dependency-injection": ">=2.0.0,<2.2.0-dev",
@@ -74,10 +74,11 @@
                 "symfony/finder": ">=2.0.0,<2.2.0-dev"
             },
             "suggest": {
-                "behat/mink-extension": "for integration of with Mink",
-                "behat/yii-extension": "for integration of with Yii framework"
+                "behat/symfony2-extension": "for integration with Symfony2 web framework",
+                "behat/yii-extension": "for integration with Yii web framework",
+                "behat/mink-extension": "for integration with Mink testing framework"
             },
-            "time": "2012-05-15 01:23:46",
+            "time": "2012-09-04 07:59:18",
             "bin": [
                 "bin/behat"
             ],
@@ -2300,12 +2301,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "938670d34b0e9822c5ac7c5ac7934c4d6591f7a1"
+                "reference": "7b4a27893a92496d0a4e8700c6cc62abf154e726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/archive/938670d34b0e9822c5ac7c5ac7934c4d6591f7a1.zip",
-                "reference": "938670d34b0e9822c5ac7c5ac7934c4d6591f7a1",
+                "url": "https://github.com/symfony/symfony/archive/7b4a27893a92496d0a4e8700c6cc62abf154e726.zip",
+                "reference": "7b4a27893a92496d0a4e8700c6cc62abf154e726",
                 "shasum": ""
             },
             "require": {
@@ -2354,7 +2355,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1352729061",
+            "time": "1352810944",
             "type": "library",
             "extra": {
                 "branch-alias": {

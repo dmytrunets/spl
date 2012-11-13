@@ -12,4 +12,5 @@ composer.phar
 .DS_Store
 php-cs-fixer.phar
 bin/behat*
+!bin/behat_run
 bin/doctrine*
