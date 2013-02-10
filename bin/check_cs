@@ -1,2 +1,23 @@
 #!/bin/bash
-php bin/php-cs-fixer fix --config=sf21 .
+# php-cs-fixer installed from composer for now dont work with 2.2 version
+# but when it would, better to use this way of checking code
+# php bin/php-cs-fixer fix --config=sf21 .
+
+if [ ! -f php-cs-fixer.phar ]; then
+    curl -O http://cs.sensiolabs.org/get/php-cs-fixer.phar
+fi
+
+if test `find "php-cs-fixer.phar" -mtime +7`; then
+    curl -O http://cs.sensiolabs.org/get/php-cs-fixer.phar
+fi
+
+if [ $1 = 'fix' ]; then
+    php php-cs-fixer.phar fix src/
+else
+    out=`php php-cs-fixer.phar fix src/ --dry-run`
+    echo -e "$out"
+    if [ ! "$out" = "" ]; then
+        echo "Use \"./bin/check_cs fix\", Luke!"
+        false
+    fi
+fi

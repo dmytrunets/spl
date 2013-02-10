@@ -1,0 +1,11 @@
+#!/bin/bash
+# Script for reseting project to clean state
+
+cmd='php app/console'
+
+$cmd doctrine:database:drop --force
+$cmd doctrine:database:create
+$cmd doctrine:migrations:migrate --no-interaction
+$cmd doctrine:fixtures:load --append
+$cmd cache:clear --env=dev --no-debug
+$cmd cache:warmup
