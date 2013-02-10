@@ -17,7 +17,25 @@
         "sensio/framework-extra-bundle": "2.2.*",
         "sensio/generator-bundle": "2.2.*",
         "jms/security-extra-bundle": "1.4.*",
-        "jms/di-extra-bundle": "1.3.*"
+        "jms/di-extra-bundle": "1.3.*",
+
+        "gedmo/doctrine-extensions": "2.3.*@dev",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "knplabs/knp-menu-bundle": "1.1.x-dev",
+        "friendsofsymfony/user-bundle": "2.0.x-dev",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master",
+        "avalanche123/imagine-bundle": "dev-master",
+        "kachkaev/assets-version-bundle": "1.0.x-dev",
+        "evercodelab/evercode-page-bundle": "dev-master",
+        "stof/doctrine-extensions-bundle": "1.1.x-dev",
+
+        "behat/behat": "2.4.*@dev",
+        "behat/mink": "1.4.*@dev",
+        "behat/symfony2-extension": "*",
+        "behat/mink-extension": "*",
+        "behat/mink-browserkit-driver": "*"
     },
     "scripts": {
         "post-install-cmd": [
