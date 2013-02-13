@@ -1,5 +1,5 @@
 {
-    "hash": "a1cf4d79f59801043d76e1a3c6a95847",
+    "hash": "4696908773be27b7441d1e540351eaba",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -57,12 +57,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/Behat/Behat.git",
-                "reference": "eafd7139aadde54587bbcb1909d4ecb324bdd2f4"
+                "reference": "8ff28797b211a559b682e9c3954bc12af6db1ca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/eafd7139aadde54587bbcb1909d4ecb324bdd2f4",
-                "reference": "eafd7139aadde54587bbcb1909d4ecb324bdd2f4",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/8ff28797b211a559b682e9c3954bc12af6db1ca0",
+                "reference": "8ff28797b211a559b682e9c3954bc12af6db1ca0",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 "behat/yii-extension": "for integration with Yii web framework",
                 "behat/mink-extension": "for integration with Mink testing framework"
             },
-            "time": "2013-02-06 16:47:49",
+            "time": "2013-02-13 19:25:31",
             "bin": [
                 "bin/behat"
             ],
@@ -121,12 +121,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/Behat/Gherkin.git",
-                "reference": "f88e765e16eee1566e9942d1457912dd7202e0e6"
+                "reference": "eb0ce5cd10821aea73df216fc0943f2fdd268962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/f88e765e16eee1566e9942d1457912dd7202e0e6",
-                "reference": "f88e765e16eee1566e9942d1457912dd7202e0e6",
+                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/eb0ce5cd10821aea73df216fc0943f2fdd268962",
+                "reference": "eb0ce5cd10821aea73df216fc0943f2fdd268962",
                 "shasum": ""
             },
             "require": {
@@ -143,7 +143,7 @@
                 "symfony/translation": "If you want to use Symfony2 translations adapter",
                 "symfony/config": "If you want to use Config component to manage resources"
             },
-            "time": "2013-01-26 23:59:16",
+            "time": "2013-02-13 19:04:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -182,25 +182,17 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/Behat/Mink.git",
-                "reference": "8c138509002de0639a50c7f047a44c0db8bc23e2"
+                "reference": "844bbded21464de408d8360a219759bb82519552"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Mink/zipball/8c138509002de0639a50c7f047a44c0db8bc23e2",
-                "reference": "8c138509002de0639a50c7f047a44c0db8bc23e2",
+                "url": "https://api.github.com/repos/Behat/Mink/zipball/844bbded21464de408d8360a219759bb82519552",
+                "reference": "844bbded21464de408d8360a219759bb82519552",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
                 "symfony/css-selector": ">=2.0,<2.3-dev"
-            },
-            "require-dev": {
-                "behat/mink-goutte-driver": "*",
-                "behat/mink-sahi-driver": "*",
-                "behat/mink-selenium-driver": "*",
-                "behat/mink-selenium2-driver": "*",
-                "behat/mink-zombie-driver": "*",
-                "symfony/finder": ">=2.0,<2.3-dev"
             },
             "suggest": {
                 "behat/mink-goutte-driver": "to enable Goutte support",
@@ -209,7 +201,7 @@
                 "behat/mink-selenium2-driver": "to enable Selenium2 (webdriver support)",
                 "behat/mink-zombie-driver": "to enable Zombie.js support"
             },
-            "time": "2013-01-27 15:34:58",
+            "time": "2013-02-13 19:22:29",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -246,21 +238,30 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/Behat/MinkBrowserKitDriver.git",
-                "reference": "fa865aee4796ea08d38952b840267736be833d1d"
+                "reference": "d997c42aa053b1b922b87ff87903a6d324ccad2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/MinkBrowserKitDriver/zipball/fa865aee4796ea08d38952b840267736be833d1d",
-                "reference": "fa865aee4796ea08d38952b840267736be833d1d",
+                "url": "https://api.github.com/repos/Behat/MinkBrowserKitDriver/zipball/d997c42aa053b1b922b87ff87903a6d324ccad2f",
+                "reference": "d997c42aa053b1b922b87ff87903a6d324ccad2f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
-                "symfony/browser-kit": ">=2.0.0,<2.3-dev",
-                "symfony/dom-crawler": ">=2.0.0,<2.3-dev"
+                "behat/mink": ">=1.4,<1.5-dev",
+                "symfony/browser-kit": ">=2.0,<2.3-dev",
+                "symfony/dom-crawler": ">=2.0,<2.3-dev"
             },
-            "time": "2012-11-18 17:19:25",
+            "require-dev": {
+                "silex/silex": "@dev"
+            },
+            "time": "2013-02-13 19:56:29",
             "type": "mink-driver",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Behat\\Mink\\Driver": "src/"
@@ -282,7 +283,8 @@
             "keywords": [
                 "Symfony2",
                 "testing",
-                "browser"
+                "browser",
+                "Mink"
             ]
         },
         {
@@ -335,17 +337,132 @@
             ]
         },
         {
+            "name": "behat/mink-goutte-driver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/Behat/MinkGoutteDriver.git",
+                "reference": "1226382da717e79ac58a800f119f090641f13b67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Behat/MinkGoutteDriver/zipball/1226382da717e79ac58a800f119f090641f13b67",
+                "reference": "1226382da717e79ac58a800f119f090641f13b67",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "symfony/browser-kit": ">=2.1,<2.3-dev",
+                "symfony/css-selector": ">=2.1,<2.3-dev",
+                "symfony/dom-crawler": ">=2.1,<2.3-dev",
+                "symfony/finder": ">=2.1,<2.3-dev",
+                "symfony/process": ">=2.1,<2.3-dev",
+                "behat/mink": ">=1.4,<1.5.0-dev",
+                "behat/mink-browserkit-driver": "1.0.x@dev",
+                "fabpot/goutte": "1.0.x@dev"
+            },
+            "time": "2013-02-13 19:42:21",
+            "type": "mink-driver",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Behat\\Mink\\Driver": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Konstantin Kudryashov",
+                    "email": "ever.zet@gmail.com",
+                    "homepage": "http://everzet.com"
+                }
+            ],
+            "description": "Goutte driver for Mink framework",
+            "homepage": "http://mink.behat.org/",
+            "keywords": [
+                "testing",
+                "browser",
+                "goutte",
+                "headless"
+            ]
+        },
+        {
+            "name": "behat/mink-selenium2-driver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/Behat/MinkSelenium2Driver.git",
+                "reference": "6a46cf95d0730a504aeecfbc5edca9a0f00ceeff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Behat/MinkSelenium2Driver/zipball/6a46cf95d0730a504aeecfbc5edca9a0f00ceeff",
+                "reference": "6a46cf95d0730a504aeecfbc5edca9a0f00ceeff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "instaclick/php-webdriver": "@dev",
+                "behat/mink": ">=1.4,<1.5-dev"
+            },
+            "time": "2013-02-13 19:41:59",
+            "type": "mink-driver",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Behat\\Mink\\Driver": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Konstantin Kudryashov",
+                    "email": "ever.zet@gmail.com",
+                    "homepage": "http://everzet.com"
+                },
+                {
+                    "name": "Pete Otaqui",
+                    "email": "pete@otaqui.com",
+                    "homepage": "https://github.com/pete-otaqui"
+                }
+            ],
+            "description": "Selenium2 (WebDriver) driver for Mink framework",
+            "homepage": "http://mink.behat.org/",
+            "keywords": [
+                "javascript",
+                "testing",
+                "browser",
+                "ajax",
+                "selenium",
+                "webdriver"
+            ]
+        },
+        {
             "name": "behat/symfony2-extension",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/Behat/Symfony2Extension.git",
-                "reference": "af142f441fb83e5ea4c02a136ed582a99d23e409"
+                "reference": "9ebc7f871ec8d2fe3061ecc38fbef970c8cf7bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/af142f441fb83e5ea4c02a136ed582a99d23e409",
-                "reference": "af142f441fb83e5ea4c02a136ed582a99d23e409",
+                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/9ebc7f871ec8d2fe3061ecc38fbef970c8cf7bf4",
+                "reference": "9ebc7f871ec8d2fe3061ecc38fbef970c8cf7bf4",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +476,7 @@
                 "behat/mink-browserkit-driver": "dev-master",
                 "behat/mink": "1.4@stable"
             },
-            "time": "2013-01-27 15:31:10",
+            "time": "2013-02-13 00:33:30",
             "type": "behat-extension",
             "autoload": {
                 "psr-0": {
@@ -460,12 +577,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "50e7e644984f17038224f6fcd02c2b7c20147980"
+                "reference": "689bc2ae2a41dff1107d9d50e2daa4c349222869"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/50e7e644984f17038224f6fcd02c2b7c20147980",
-                "reference": "50e7e644984f17038224f6fcd02c2b7c20147980",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/689bc2ae2a41dff1107d9d50e2daa4c349222869",
+                "reference": "689bc2ae2a41dff1107d9d50e2daa4c349222869",
                 "shasum": ""
             },
             "require": {
@@ -480,7 +597,7 @@
                 "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
                 "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
             },
-            "time": "2013-01-05 13:05:52",
+            "time": "2013-02-12 02:52:36",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -649,12 +766,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "95d1e0291878f64d376c878d9578239760cbaf73"
+                "reference": "275540d96599baec19fa3292c4d06c5cd4eefd06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/95d1e0291878f64d376c878d9578239760cbaf73",
-                "reference": "95d1e0291878f64d376c878d9578239760cbaf73",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/275540d96599baec19fa3292c4d06c5cd4eefd06",
+                "reference": "275540d96599baec19fa3292c4d06c5cd4eefd06",
                 "shasum": ""
             },
             "require": {
@@ -663,8 +780,13 @@
                 "symfony/doctrine-bridge": ">=2.1.0,<2.3-dev",
                 "doctrine/doctrine-bundle": ">=1.0,<2.0"
             },
-            "time": "2013-01-13 12:20:51",
+            "time": "2013-02-12 11:13:27",
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\Bundle\\FixturesBundle": ""
@@ -919,18 +1041,70 @@
             ]
         },
         {
+            "name": "fabpot/goutte",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Goutte",
+                "reference": "ab0a4307ab6f8ef4019b83f62e179803d9d1002c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/ab0a4307ab6f8ef4019b83f62e179803d9d1002c",
+                "reference": "ab0a4307ab6f8ef4019b83f62e179803d9d1002c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "ext-curl": "*",
+                "guzzle/guzzle": "3.0.*",
+                "symfony/browser-kit": ">=2.1, <2.3-dev",
+                "symfony/css-selector": ">=2.1, <2.3-dev",
+                "symfony/dom-crawler": ">=2.1, <2.3-dev",
+                "symfony/finder": ">=2.1, <2.3-dev",
+                "symfony/process": ">=2.1, <2.3-dev"
+            },
+            "time": "2013-02-08 21:20:16",
+            "type": "application",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Goutte": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A simple PHP Web Scraper",
+            "homepage": "https://github.com/fabpot/Goutte",
+            "keywords": [
+                "scraper"
+            ]
+        },
+        {
             "name": "friendsofsymfony/user-bundle",
             "version": "dev-master",
             "target-dir": "FOS/UserBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "df0cab6237206a53030b6970a5b5580d4b8fa483"
+                "reference": "f31a1fcc88b589f106d1a038c06dc946f33f5d0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/df0cab6237206a53030b6970a5b5580d4b8fa483",
-                "reference": "df0cab6237206a53030b6970a5b5580d4b8fa483",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/f31a1fcc88b589f106d1a038c06dc946f33f5d0c",
+                "reference": "f31a1fcc88b589f106d1a038c06dc946f33f5d0c",
                 "shasum": ""
             },
             "require": {
@@ -951,7 +1125,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "2013-01-31 20:47:01",
+            "time": "2013-02-12 09:03:30",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -994,12 +1168,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/l3pp4rd/DoctrineExtensions.git",
-                "reference": "1ceb60dcec48c5e26d6dbade66c1b0c654050775"
+                "reference": "b2806e409f21132e814203e36810b7112453a858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/1ceb60dcec48c5e26d6dbade66c1b0c654050775",
-                "reference": "1ceb60dcec48c5e26d6dbade66c1b0c654050775",
+                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/b2806e409f21132e814203e36810b7112453a858",
+                "reference": "b2806e409f21132e814203e36810b7112453a858",
                 "shasum": ""
             },
             "require": {
@@ -1019,7 +1193,7 @@
                 "doctrine/orm": ">=2.3.2",
                 "doctrine/dbal": ">=2.3.2"
             },
-            "time": "2013-02-07 07:39:32",
+            "time": "2013-02-13 19:35:33",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1065,6 +1239,98 @@
                 "timestampable",
                 "Blameable",
                 "uploadable"
+            ]
+        },
+        {
+            "name": "guzzle/guzzle",
+            "version": "v3.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle",
+                "reference": "v3.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/guzzle/guzzle/archive/v3.0.7.zip",
+                "reference": "v3.0.7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "ext-curl": "*",
+                "symfony/event-dispatcher": ">=2.1"
+            },
+            "replace": {
+                "guzzle/batch": "self.version",
+                "guzzle/cache": "self.version",
+                "guzzle/common": "self.version",
+                "guzzle/http": "self.version",
+                "guzzle/inflection": "self.version",
+                "guzzle/iterator": "self.version",
+                "guzzle/log": "self.version",
+                "guzzle/parser": "self.version",
+                "guzzle/plugin": "self.version",
+                "guzzle/plugin-async": "self.version",
+                "guzzle/plugin-backoff": "self.version",
+                "guzzle/plugin-cache": "self.version",
+                "guzzle/plugin-cookie": "self.version",
+                "guzzle/plugin-curlauth": "self.version",
+                "guzzle/plugin-history": "self.version",
+                "guzzle/plugin-log": "self.version",
+                "guzzle/plugin-md5": "self.version",
+                "guzzle/plugin-mock": "self.version",
+                "guzzle/plugin-oauth": "self.version",
+                "guzzle/service": "self.version",
+                "guzzle/stream": "self.version"
+            },
+            "require-dev": {
+                "doctrine/common": "*",
+                "symfony/class-loader": "*",
+                "monolog/monolog": "1.*",
+                "zendframework/zend-cache": "2.0.*",
+                "zendframework/zend-log": "2.0.*",
+                "zend/zend-log1": "1.12",
+                "zend/zend-cache1": "1.12",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "time": "2012-12-19 23:06:35",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle\\Tests": "tests/",
+                    "Guzzle": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Guzzle Community",
+                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "framework",
+                "curl",
+                "http",
+                "rest",
+                "http client",
+                "client",
+                "web service"
             ]
         },
         {
@@ -1115,23 +1381,72 @@
             ]
         },
         {
+            "name": "instaclick/php-webdriver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/instaclick/php-webdriver",
+                "reference": "1.0.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/1.0.11",
+                "reference": "1.0.11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "time": "2012-12-02 22:08:47",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "WebDriver": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Bishop",
+                    "email": "jubishop@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anthon Pang",
+                    "email": "apang@softwaredevelopment.ca",
+                    "role": "Fork Maintainer"
+                }
+            ],
+            "description": "PHP WebDriver for Selenium 2",
+            "homepage": "http://instaclick.com/torontotechjobs/",
+            "keywords": [
+                "browser",
+                "selenium",
+                "webdriver",
+                "webtest"
+            ]
+        },
+        {
             "name": "jdorn/sql-formatter",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/jdorn/sql-formatter.git",
-                "reference": "da55bd76098f872b44343ba456db868cbcac8776"
+                "reference": "7a92826fe2734518e9cd6ebcf1ba052e58351c34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/da55bd76098f872b44343ba456db868cbcac8776",
-                "reference": "da55bd76098f872b44343ba456db868cbcac8776",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/7a92826fe2734518e9cd6ebcf1ba052e58351c34",
+                "reference": "7a92826fe2734518e9cd6ebcf1ba052e58351c34",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2013-01-18 07:52:11",
+            "time": "2013-02-11 00:21:20",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1485,42 +1800,40 @@
             ]
         },
         {
-            "name": "kachkaev/assets-version-bundle",
+            "name": "knplabs/knp-components",
             "version": "dev-master",
-            "target-dir": "Kachkaev/AssetsVersionBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kachkaev/KachkaevAssetsVersionBundle",
-                "reference": "5f78a108b7cc140bfd78a36b35536160988ba59d"
+                "url": "https://github.com/KnpLabs/knp-components",
+                "reference": "a1006249984aa4199b2a91289aca1aeca103e067"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kachkaev/KachkaevAssetsVersionBundle/zipball/5f78a108b7cc140bfd78a36b35536160988ba59d",
-                "reference": "5f78a108b7cc140bfd78a36b35536160988ba59d",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/a1006249984aa4199b2a91289aca1aeca103e067",
+                "reference": "a1006249984aa4199b2a91289aca1aeca103e067",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.0,<2.3-dev"
-            },
-            "require-dev": {
-                "symfony/finder": ">=2.1,<2.3-dev",
-                "symfony/filesystem": ">=2.1,<2.3-dev"
+                "php": ">=5.3.2"
             },
             "suggest": {
-                "symfony/twig-bundle": ">=2.1.0,<2.3-dev",
-                "symfony/assetic-bundle": ">=2.1.0,<2.3-dev"
+                "doctrine/orm": "to allow usage pagination with Doctrine ORM",
+                "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
+                "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
+                "ruflin/Elastica": "to allow usage pagination with ElasticSearch Client",
+                "propel/propel1": "to allow usage pagination with Propel ORM",
+                "solarium/solarium": "to allow usage pagination with Solarium Client"
             },
-            "time": "2013-01-18 21:42:42",
-            "type": "symfony-bundle",
+            "time": "2013-02-11 08:34:46",
+            "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Kachkaev\\AssetsVersionBundle": ""
+                    "Knp\\Component": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1529,25 +1842,22 @@
             ],
             "authors": [
                 {
-                    "name": "Alexander Kachkaev",
-                    "email": "alexander@kachkaev.ru",
-                    "homepage": "http://en.kachkaev.ru/"
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
                 },
                 {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/kachkaev/KachkaevAssetsVersionBundle/contributors"
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/knp-components/contributors"
                 }
             ],
-            "description": "Automates the process of updating assets version in Symfony2 projects",
-            "homepage": "http://github.com/kachkaev/KachkaevAssetsVersionBundle",
+            "description": "Knplabs component library",
+            "homepage": "http://github.com/KnpLabs/knp-components",
             "keywords": [
-                "assets",
-                "deploy",
-                "version",
-                "console",
-                "config",
-                "assetic",
-                "autoincrement"
+                "pager",
+                "components",
+                "knp",
+                "knplabs",
+                "paginator"
             ]
         },
         {
@@ -1664,17 +1974,76 @@
             ]
         },
         {
+            "name": "knplabs/knp-paginator-bundle",
+            "version": "dev-master",
+            "target-dir": "Knp/Bundle/PaginatorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle",
+                "reference": "9784c6610db43afcc058f847ad757e50d26d8cf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/9784c6610db43afcc058f847ad757e50d26d8cf4",
+                "reference": "9784c6610db43afcc058f847ad757e50d26d8cf4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": ">=2.0,<3.0",
+                "knplabs/knp-components": ">=1.1,<2.0",
+                "twig/twig": ">=1.5,<2.0"
+            },
+            "time": "2013-02-07 20:21:12",
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\PaginatorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony2 Community",
+                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+                }
+            ],
+            "description": "Paginator bundle for Symfony2 to automate pagination and simplify sorting and other features",
+            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+            "keywords": [
+                "Symfony2",
+                "pager",
+                "knp",
+                "knplabs",
+                "paginator",
+                "pagination",
+                "bundle"
+            ]
+        },
+        {
             "name": "kriswallsmith/assetic",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "http://github.com/kriswallsmith/assetic.git",
-                "reference": "v1.1.0-alpha2"
+                "reference": "504c9e8a6357583c20c9d9967ec2febea3157324"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/v1.1.0-alpha2",
-                "reference": "v1.1.0-alpha2",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/504c9e8a6357583c20c9d9967ec2febea3157324",
+                "reference": "504c9e8a6357583c20c9d9967ec2febea3157324",
                 "shasum": ""
             },
             "require": {
@@ -1690,7 +2059,8 @@
                 "cssmin/cssmin": "*",
                 "mrclay/minify": "*",
                 "kamicane/packager": "*",
-                "joliclic/javascript-packer": "*"
+                "joliclic/javascript-packer": "*",
+                "phpunit/phpunit": "3.7.*"
             },
             "suggest": {
                 "twig/twig": "Assetic provides the integration with the Twig templating engine",
@@ -1699,7 +2069,7 @@
                 "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
                 "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin"
             },
-            "time": "2013-01-31 17:45:10",
+            "time": "2013-02-11 18:18:06",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1739,12 +2109,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog",
-                "reference": "957ee8d0d62fad0c336797f0fb1ffa63ae6d6c71"
+                "reference": "48f22f4519ed17b4754c4b561101d19aeb0d0236"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/957ee8d0d62fad0c336797f0fb1ffa63ae6d6c71",
-                "reference": "957ee8d0d62fad0c336797f0fb1ffa63ae6d6c71",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/48f22f4519ed17b4754c4b561101d19aeb0d0236",
+                "reference": "48f22f4519ed17b4754c4b561101d19aeb0d0236",
                 "shasum": ""
             },
             "require": {
@@ -1763,7 +2133,7 @@
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "raven/raven": "Allow sending log messages to a Sentry server"
             },
-            "time": "2013-01-22 15:02:20",
+            "time": "2013-02-13 18:09:50",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1889,18 +2259,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioDistributionBundle",
-                "reference": "v2.2.0-RC1"
+                "reference": "15a12bdea8e562ff8a665573c40a8d32ecf38db6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensio/SensioDistributionBundle/zipball/v2.2.0-RC1",
-                "reference": "v2.2.0-RC1",
+                "url": "https://api.github.com/repos/sensio/SensioDistributionBundle/zipball/15a12bdea8e562ff8a665573c40a8d32ecf38db6",
+                "reference": "15a12bdea8e562ff8a665573c40a8d32ecf38db6",
                 "shasum": ""
             },
             "require": {
                 "symfony/framework-bundle": "2.2.*"
             },
-            "time": "2013-02-05 08:55:01",
+            "time": "2013-02-11 14:46:49",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2033,17 +2403,16 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "dc77e3b3b6fa4603e10e7c391a4641d72d352977"
+                "reference": "54e161e32b51e11eb245a70a8abfb8f80341a068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/dc77e3b3b6fa4603e10e7c391a4641d72d352977",
-                "reference": "dc77e3b3b6fa4603e10e7c391a4641d72d352977",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/54e161e32b51e11eb245a70a8abfb8f80341a068",
+                "reference": "54e161e32b51e11eb245a70a8abfb8f80341a068",
                 "shasum": ""
             },
             "require": {
                 "sonata-project/jquery-bundle": "dev-master",
-                "sonata-project/exporter": "dev-master",
                 "sonata-project/block-bundle": "dev-master",
                 "symfony/http-foundation": ">=2.1,<2.3-dev",
                 "symfony/form": ">=2.1,<2.3-dev",
@@ -2054,7 +2423,8 @@
                 "twig/twig": ">=1.10,<2.0-dev",
                 "knplabs/knp-menu-bundle": ">=1.1.0,<2.0.x-dev",
                 "symfony/twig-bridge": ">=2.1,<2.3-dev",
-                "symfony/security-bundle": ">=2.1,<2.3-dev"
+                "symfony/security-bundle": ">=2.1,<2.3-dev",
+                "sonata-project/exporter": "1.1.*"
             },
             "require-dev": {
                 "jms/translation-bundle": "*"
@@ -2063,7 +2433,7 @@
                 "sonata-project/doctrine-orm-admin-bundle": "dev-master",
                 "sonata-project/intl-bundle": "dev-master"
             },
-            "time": "2013-02-06 15:33:51",
+            "time": "2013-02-13 10:25:56",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2101,12 +2471,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataBlockBundle",
-                "reference": "8eb88c5c744b2732c8e79e9595cb86dfbbd1f25b"
+                "reference": "3effdf4f8da8ebd256bfef9e42ad0f7ca53a5f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/8eb88c5c744b2732c8e79e9595cb86dfbbd1f25b",
-                "reference": "8eb88c5c744b2732c8e79e9595cb86dfbbd1f25b",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/3effdf4f8da8ebd256bfef9e42ad0f7ca53a5f9b",
+                "reference": "3effdf4f8da8ebd256bfef9e42ad0f7ca53a5f9b",
                 "shasum": ""
             },
             "require": {
@@ -2121,7 +2491,7 @@
                 "sonata-project/admin-bundle": "dev-master",
                 "sonata-project/cache-bundle": "dev-master"
             },
-            "time": "2013-01-28 00:45:07",
+            "time": "2013-02-11 17:36:47",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2204,7 +2574,7 @@
         },
         {
             "name": "sonata-project/exporter",
-            "version": "dev-master",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/exporter",
@@ -2304,68 +2674,6 @@
             ]
         },
         {
-            "name": "stof/doctrine-extensions-bundle",
-            "version": "dev-master",
-            "target-dir": "Stof/DoctrineExtensionsBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stof/StofDoctrineExtensionsBundle",
-                "reference": "4a17550d8b101c5aafc56c9950149aa189b8402d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/4a17550d8b101c5aafc56c9950149aa189b8402d",
-                "reference": "4a17550d8b101c5aafc56c9950149aa189b8402d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.1,<2.3-dev",
-                "gedmo/doctrine-extensions": "2.3.*"
-            },
-            "suggest": {
-                "doctrine/doctrine-bundle": "*",
-                "doctrine/mongodb-odm-bundle": "2.1.*"
-            },
-            "time": "2012-12-13 17:58:07",
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Stof\\DoctrineExtensionsBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                }
-            ],
-            "description": "Integration of the gedmo/doctrine-extensions with Symfony2",
-            "homepage": "https://github.com/stof/StofDoctrineExtensionsBundle",
-            "keywords": [
-                "tree",
-                "behaviors",
-                "doctrine2",
-                "extensions",
-                "gedmo",
-                "sluggable",
-                "loggable",
-                "translatable",
-                "nestedset",
-                "sortable",
-                "timestampable"
-            ]
-        },
-        {
             "name": "swiftmailer/swiftmailer",
             "version": "dev-master",
             "source": {
@@ -2421,12 +2729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/AsseticBundle",
-                "reference": "v2.1.1-beta1"
+                "reference": "v2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/v2.1.1-beta1",
-                "reference": "v2.1.1-beta1",
+                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/v2.1.1",
+                "reference": "v2.1.1",
                 "shasum": ""
             },
             "require": {
@@ -2484,25 +2792,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle",
-                "reference": "v2.2.0-BETA2"
+                "reference": "v2.2.0-RC2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/v2.2.0-BETA2",
-                "reference": "v2.2.0-BETA2",
+                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/v2.2.0-RC2",
+                "reference": "v2.2.0-RC2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/monolog-bridge": ">=2.2,<3.0",
-                "symfony/dependency-injection": ">=2.2,<3.0",
-                "symfony/config": ">=2.2,<3.0",
-                "monolog/monolog": ">=1.3,<2.0"
+                "monolog/monolog": ">=1.3,<2.0",
+                "symfony/monolog-bridge": ">=2.2-beta2,<3.0",
+                "symfony/dependency-injection": ">=2.2-beta2,<3.0",
+                "symfony/config": ">=2.2-beta2,<3.0"
             },
             "require-dev": {
-                "symfony/yaml": ">=2.2,<3.0"
+                "symfony/yaml": ">=2.2-beta2,<3.0"
             },
-            "time": "2013-01-12 13:42:55",
+            "time": "2013-02-11 10:49:31",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2596,12 +2904,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "f2258e7ec746623bdd5464db9e3acf58f031b89f"
+                "reference": "b38ab51271824467eecf4698b84b5a49152adbf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/f2258e7ec746623bdd5464db9e3acf58f031b89f",
-                "reference": "f2258e7ec746623bdd5464db9e3acf58f031b89f",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b38ab51271824467eecf4698b84b5a49152adbf1",
+                "reference": "b38ab51271824467eecf4698b84b5a49152adbf1",
                 "shasum": ""
             },
             "require": {
@@ -2653,7 +2961,7 @@
                 "doctrine/orm": ">=2.2,<3.0,>=2.2.3",
                 "propel/propel1": "1.6.*"
             },
-            "time": "2013-02-09 18:08:46",
+            "time": "2013-02-13 07:21:16",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2796,13 +3104,12 @@
         "sonata-project/admin-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
+        "knplabs/knp-paginator-bundle": 20,
         "friendsofsymfony/user-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20,
         "doctrine/doctrine-migrations-bundle": 20,
         "avalanche123/imagine-bundle": 20,
-        "kachkaev/assets-version-bundle": 20,
         "evercodelab/evercode-page-bundle": 20,
-        "stof/doctrine-extensions-bundle": 20,
         "behat/behat": 20,
         "behat/mink": 20
     }

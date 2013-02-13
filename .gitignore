@@ -8,6 +8,7 @@ vendor
 composer.phar
 php-cs-fixer.phar
 bin/behat*
+bin/phpspec*
 !bin/behat_run
 bin/doctrine*
 bin/php-cs-fixer

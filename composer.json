@@ -23,19 +23,19 @@
         "sonata-project/admin-bundle": "dev-master",
         "sonata-project/doctrine-orm-admin-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "1.1.x-dev",
+        "knplabs/knp-paginator-bundle": "2.3.*@dev",
         "friendsofsymfony/user-bundle": "2.0.x-dev",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "avalanche123/imagine-bundle": "dev-master",
-        "kachkaev/assets-version-bundle": "1.0.x-dev",
         "evercodelab/evercode-page-bundle": "dev-master",
-        "stof/doctrine-extensions-bundle": "1.1.x-dev",
 
         "behat/behat": "2.4.*@dev",
         "behat/mink": "1.4.*@dev",
         "behat/symfony2-extension": "*",
         "behat/mink-extension": "*",
-        "behat/mink-browserkit-driver": "*"
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*"
     },
     "scripts": {
         "post-install-cmd": [

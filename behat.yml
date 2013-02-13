@@ -1,0 +1,7 @@
+default:
+    formatter:
+        name: progress
+    extensions:
+        Behat\MinkExtension\Extension:
+            goutte: ~
+            selenium2: ~

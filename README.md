@@ -1,174 +1,85 @@
-Symfony Standard Edition
-========================
+# Symfony EvercodeLab Edition
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
+Рады представить вам **Symfony EvercodeLab Edition**, нашу небольшую доработку
+для [Symfony Standard Edition][1], призванную ускорить процесс начала разработки
+нового приложения.
 
-This document contains information on how to download, install, and start
-using Symfony. For a more detailed explanation, see the [Installation][1]
-chapter of the Symfony Documentation.
+Кроме стандартных компонентов Symfony2 в данный вариант включены некоторые 
+дополнительные пакеты, которые мы обычно используем в своей работе:
 
-1) Installing the Standard Edition
-----------------------------------
+* [GedmoDoctrineExtensions][2] — расширение возможностей Doctrine. Добавляет
+такие полезные штуки как Timestampable (добавляет время создания, обновления),
+Tree (добавляет возможность работы с деревьями).
+* [SonataAdminBundle][3] — административный интерфейс для Symfony
+* [KnpMenuBundle][4] — генерация меню
+* [KnpPaginatorBundle][5] — создание пагинации
+* [FosUserBundle][6] — управление пользователями
+* [DoctrineFixturesBundle][7] — управление фикстурами
+* [DoctrineMigrationsBudnle][8] — управление миграциями
+* [AvalancheImagineBundle][9] — бандл для работы с изображениями
+* [EvercodePageBundle][10] — наш небольшой бандл для создания и отображения 
+простых страниц
 
-When it comes to installing the Symfony Standard Edition, you have the
-following options.
+## Установка
 
-### Use Composer (*recommended*)
+Для установки можно воспользоваться несколькими возможностями. Первая из них
+воспользоваться composer:
 
-As Symfony uses [Composer][2] to manage its dependencies, the recommended way
-to create a new project is to use it.
 
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
+    composer.phar create-project evercode/symfony-skeleton path/
 
-    curl -s http://getcomposer.org/installer | php
+Вторая возможность это воспользоваться клонированием с github:
 
-Then, use the `create-project` command to generate a new Symfony application:
+    git clone git@github.com:EvercodeLab/symfony-skeleton.git path/
 
-    php composer.phar create-project symfony/framework-standard-edition path/to/install
+В обоих случаях `path` это путь, куда будет устанавливаться новый проект.
 
-Composer will install Symfony and all its dependencies under the
-`path/to/install` directory.
+Следующие действия идентичны для обоих обоих вариантов, нам необходимо запустить
+установочный скрипт, который сделает за нас большую часть работы:
 
-### Download an Archive File
+    bin/set_project
 
-To quickly test Symfony, you can also download an [archive][3] of the Standard
-Edition and unpack it somewhere under your web server root directory.
+Скрипт выполняет следующие действия:
 
-If you downloaded an archive "without vendors", you also need to install all
-the necessary dependencies. Download composer (see above) and run the
-following command:
+* Создает необходимые директории (`app/cache` и `app/logs`) и выставляет 
+необходимые права на них (в этом месте установочный скрипт может запросить у 
+вас пароль для `sudo`, так как установка прав на папки идет от имени 
+администратора)
+* Копирует и открывает на редактирование файл с настройками. При этом файл 
+открывается в программе, которая установлена как редактор в `$EDITOR` переменной
+операционной системы.
+* Скачивается, если необходимо, composer, после чего происходит установка
+необходимых пакетов.
+* Создается база данных и прогоняются необходимые действия для придание ей
+рабочего вида (миграции и загрузка фикстур), в базовом варианте — создаются 
+таблицы от FosUserBundle и загружается тестовый пользователь.
 
-    php composer.phar install
+Всё, теперь наш проект готов к работе!
 
-2) Checking your System Configuration
--------------------------------------
+## Запуск проекта с использованием встроенного сервера php
 
-Before starting coding, make sure that your local system is properly
-configured for Symfony.
+Для этого просто запускаем команду:
+    
+    bin/run_project
 
-Execute the `check.php` script from the command line:
+после этого откроется браузер на главной странице проекта, ну и так же 
+запустится сервер, на котором всё это дело крутится.
 
-    php app/check.php
+## Тестирование
 
-Access the `config.php` script from a browser:
+Для тестирования мы используем [Behat + Mink][11]. Тут опять же все просто. 
+Тесты располагаются в папочке `features`, и запускаются командой `bin/behat`. 
+Вот в общем то и всё. Для лучшего понимания работы с Behat лучше всего обратится
+к документации на официальном сайте.
 
-    http://localhost/path/to/symfony/app/web/config.php
-
-If you get any warnings or recommendations, fix them before moving on.
-
-3) Browsing the Demo Application
---------------------------------
-
-Congratulations! You're now ready to use Symfony.
-
-From the `config.php` page, click the "Bypass configuration and go to the
-Welcome page" link to load up your first Symfony page.
-
-You can also use a web-based configurator by clicking on the "Configure your
-Symfony Application online" link of the `config.php` page.
-
-To see a real-live Symfony page in action, access the following page:
-
-    web/app_dev.php/demo/hello/Fabien
-
-4) Getting started with Symfony
--------------------------------
-
-This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
-and play with.
-
-A great way to start learning Symfony is via the [Quick Tour][4], which will
-take you through all the basic features of Symfony2.
-
-Once you're feeling good, you can move onto reading the official
-[Symfony2 book][5].
-
-A default bundle, `AcmeDemoBundle`, shows you Symfony2 in action. After
-playing with it, you can remove it by following these steps:
-
-  * delete the `src/Acme` directory;
-
-  * remove the routing entries referencing AcmeBundle in
-    `app/config/routing_dev.yml`;
-
-  * remove the AcmeBundle from the registered bundles in `app/AppKernel.php`;
-
-  * remove the `web/bundles/acmedemo` directory;
-
-  * remove the `security.providers`, `security.firewalls.login` and
-    `security.firewalls.secured_area` entries in the `security.yml` file or
-    tweak the security configuration to fit your needs.
-
-What's inside?
----------------
-
-The Symfony Standard Edition is configured with the following defaults:
-
-  * Twig is the only configured template engine;
-
-  * Doctrine ORM/DBAL is configured;
-
-  * Swiftmailer is configured;
-
-  * Annotations for everything are enabled.
-
-It comes pre-configured with the following bundles:
-
-  * **FrameworkBundle** - The core Symfony framework bundle
-
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
-
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
-
-  * [**JMSSecurityExtraBundle**][13] - Allows security to be added via
-    annotations
-
-  * [**JMSDiExtraBundle**][14] - Adds more powerful dependency injection
-    features
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][15] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
-    code
-
-Enjoy!
-
-[1]:  http://symfony.com/doc/2.1/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://symfony.com/download
-[4]:  http://symfony.com/doc/2.1/quick_tour/the_big_picture.html
-[5]:  http://symfony.com/doc/2.1/index.html
-[6]:  http://symfony.com/doc/2.1/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.1/book/doctrine.html
-[8]:  http://symfony.com/doc/2.1/book/templating.html
-[9]:  http://symfony.com/doc/2.1/book/security.html
-[10]: http://symfony.com/doc/2.1/cookbook/email.html
-[11]: http://symfony.com/doc/2.1/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.1/cookbook/assetic/asset_management.html
-[13]: http://jmsyst.com/bundles/JMSSecurityExtraBundle/master
-[14]: http://jmsyst.com/bundles/JMSDiExtraBundle/master
-[15]: http://symfony.com/doc/2.1/bundles/SensioGeneratorBundle/index.html
+[1]: https://github.com/symfony/symfony-standard
+[2]: https://github.com/l3pp4rd/DoctrineExtensions
+[3]: https://github.com/sonata-project/SonataAdminBundle
+[4]: https://github.com/KnpLabs/KnpMenuBundle
+[5]: https://github.com/KnpLabs/KnpPaginatorBundle
+[6]: https://github.com/FriendsOfSymfony/FOSUserBundle
+[7]: https://github.com/doctrine/DoctrineFixturesBundle
+[8]: https://github.com/doctrine/DoctrineMigrationsBundle
+[9]: https://github.com/avalanche123/AvalancheImagineBundle
+[10]: https://github.com/EvercodeLab/EvercodePageBundle
+[11]: http://behat.org/

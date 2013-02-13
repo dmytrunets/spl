@@ -70,9 +70,3 @@ avalanche_imagine:
     web_root:     %kernel.root_dir%/../web
     driver:       gd
     cache_prefix: uploads/cache
-
-stof_doctrine_extensions:
-    default_locale: %locale%
-    orm:
-        default:
-            timestampable: true
