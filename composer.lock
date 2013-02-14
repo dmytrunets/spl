@@ -1,5 +1,5 @@
 {
-    "hash": "4696908773be27b7441d1e540351eaba",
+    "hash": "8265e8d4491c4e4c3c1a95584d15e68e",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -993,6 +993,49 @@
             "keywords": [
                 "database",
                 "orm"
+            ]
+        },
+        {
+            "name": "evercodelab/evercode-frontend-bundle",
+            "version": "dev-master",
+            "target-dir": "Evercode/Bundle/FrontendBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EvercodeLab/EvercodeFrontendBundle.git",
+                "reference": "ddf0f765dc93626df898b52c27626f239ba70bd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EvercodeLab/EvercodeFrontendBundle/zipball/ddf0f765dc93626df898b52c27626f239ba70bd9",
+                "reference": "ddf0f765dc93626df898b52c27626f239ba70bd9",
+                "shasum": ""
+            },
+            "time": "2013-02-14 21:27:34",
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Evercode\\Bundle\\FrontendBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Lunev",
+                    "email": "sergey@lunyov.ru"
+                },
+                {
+                    "name": "Evercode Lab",
+                    "homepage": "http://evercodelab.com/"
+                }
+            ],
+            "description": "Simple Symfony2 Bundle for loading jQuery and twitter-bootstrap",
+            "keywords": [
+                "jquery",
+                "frontend",
+                "twitter-bootstrap"
             ]
         },
         {
@@ -2470,13 +2513,13 @@
             "target-dir": "Sonata/BlockBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sonata-project/SonataBlockBundle",
-                "reference": "3effdf4f8da8ebd256bfef9e42ad0f7ca53a5f9b"
+                "url": "https://github.com/sonata-project/SonataBlockBundle.git",
+                "reference": "46738edd9d0414c3ce904ec761f8041424331fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/3effdf4f8da8ebd256bfef9e42ad0f7ca53a5f9b",
-                "reference": "3effdf4f8da8ebd256bfef9e42ad0f7ca53a5f9b",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/46738edd9d0414c3ce904ec761f8041424331fd2",
+                "reference": "46738edd9d0414c3ce904ec761f8041424331fd2",
                 "shasum": ""
             },
             "require": {
@@ -2491,7 +2534,7 @@
                 "sonata-project/admin-bundle": "dev-master",
                 "sonata-project/cache-bundle": "dev-master"
             },
-            "time": "2013-02-11 17:36:47",
+            "time": "2013-02-14 18:47:42",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2792,12 +2835,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle",
-                "reference": "v2.2.0-RC2"
+                "reference": "df2a8e33bdb98f848dce28e0d14e318fea71b45f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/v2.2.0-RC2",
-                "reference": "v2.2.0-RC2",
+                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/df2a8e33bdb98f848dce28e0d14e318fea71b45f",
+                "reference": "df2a8e33bdb98f848dce28e0d14e318fea71b45f",
                 "shasum": ""
             },
             "require": {
@@ -2810,7 +2853,7 @@
             "require-dev": {
                 "symfony/yaml": ">=2.2-beta2,<3.0"
             },
-            "time": "2013-02-11 10:49:31",
+            "time": "2013-02-14 10:33:50",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2903,13 +2946,13 @@
             "version": "2.2.x-dev",
             "source": {
                 "type": "git",
-                "url": "git://github.com/symfony/symfony.git",
-                "reference": "b38ab51271824467eecf4698b84b5a49152adbf1"
+                "url": "https://github.com/symfony/symfony.git",
+                "reference": "3d564ee8234db1014951d2877f23f835cd72d4b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b38ab51271824467eecf4698b84b5a49152adbf1",
-                "reference": "b38ab51271824467eecf4698b84b5a49152adbf1",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/3d564ee8234db1014951d2877f23f835cd72d4b7",
+                "reference": "3d564ee8234db1014951d2877f23f835cd72d4b7",
                 "shasum": ""
             },
             "require": {
@@ -2961,7 +3004,7 @@
                 "doctrine/orm": ">=2.2,<3.0,>=2.2.3",
                 "propel/propel1": "1.6.*"
             },
-            "time": "2013-02-13 07:21:16",
+            "time": "2013-02-14 18:46:14",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3110,6 +3153,7 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "avalanche123/imagine-bundle": 20,
         "evercodelab/evercode-page-bundle": 20,
+        "evercodelab/evercode-frontend-bundle": 20,
         "behat/behat": 20,
         "behat/mink": 20
     }

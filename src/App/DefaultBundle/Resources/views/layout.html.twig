@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    {% stylesheets
+        '@EvercodeFrontendBundle/Resources/public/css/bootstrap.min.css'
+        'css/custom.css'
+        output='compiled/compiled.css'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+
+    <title>{% block title 'EvercodeLab Symfony2 Skeleton' %}</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+<body>
+<div class="wrap">
+    <div class="container">
+
+    {% block content %}{% endblock %}
+
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer"></div>
+
+{% javascripts
+    '@EvercodeFrontendBundle/Resources/public/js/jquery.min.js'
+    '@EvercodeFrontendBundle/Resources/public/js/bootstrap.min.js'
+    output='compiled/compiled.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+</body>
+</html>

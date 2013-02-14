@@ -29,6 +29,7 @@
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "avalanche123/imagine-bundle": "dev-master",
         "evercodelab/evercode-page-bundle": "dev-master",
+        "evercodelab/evercode-frontend-bundle": "dev-master",
 
         "behat/behat": "2.4.*@dev",
         "behat/mink": "1.4.*@dev",
