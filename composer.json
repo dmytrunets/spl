@@ -1,6 +1,6 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "evercodelab/symfony-skeleton",
+    "description": "The \"Symfony Evercode Edition\" skeleton with basic configuration",
     "autoload": {
         "psr-0": { "": "src/" }
     },
