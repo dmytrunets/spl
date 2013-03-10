@@ -33,8 +33,7 @@ class AppKernel extends Kernel
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             
-            new App\DefaultBundle\AppDefaultBundle(),
-            new App\UserBundle\AppUserBundle(),
+            new App\App(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

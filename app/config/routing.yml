@@ -1,10 +1,5 @@
-app_user:
-    resource: "@AppUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 app_default:
-    resource: "@AppDefaultBundle/Controller/"
+    resource: "@App/Controller/"
     type:     annotation
     prefix:   /
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\UserBundle\DataFixture\ORM;
+namespace App\DataFixture\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;

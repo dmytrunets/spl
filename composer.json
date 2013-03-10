@@ -2,7 +2,7 @@
     "name": "evercodelab/symfony-skeleton",
     "description": "The \"Symfony Evercode Edition\" skeleton with basic configuration",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "": "src/", "Context": "features/" }
     },
     "require": {
         "php": ">=5.3.3",
@@ -29,14 +29,17 @@
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "avalanche123/imagine-bundle": "dev-master",
         "evercodelab/evercode-page-bundle": "dev-master",
-        "evercodelab/evercode-frontend-bundle": "dev-master",
-
-        "behat/behat": "2.4.*@dev",
+        "evercodelab/evercode-frontend-bundle": "dev-master"
+    },
+    "require-dev": {
+        "behat/behat": "2.4.*",
         "behat/mink": "1.4.*@dev",
         "behat/symfony2-extension": "*",
         "behat/mink-extension": "*",
         "behat/mink-goutte-driver": "*",
-        "behat/mink-selenium2-driver": "*"
+        "behat/mink-selenium2-driver": "*",
+        "phpspec/phpspec2": "dev-develop",
+        "phpspec/php-diff": "*@dev"
     },
     "scripts": {
         "post-install-cmd": [
