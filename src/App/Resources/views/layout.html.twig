@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
 
     {% stylesheets
-        '@EvercodeFrontendBundle/Resources/public/css/bootstrap.min.css'
         'css/custom.css'
         output='compiled/compiled.css'
     %}
@@ -27,8 +26,7 @@
 <div class="footer"></div>
 
 {% javascripts
-    '@EvercodeFrontendBundle/Resources/public/js/jquery.min.js'
-    '@EvercodeFrontendBundle/Resources/public/js/bootstrap.min.js'
+    'js/custom.js'
     output='compiled/compiled.js'
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>

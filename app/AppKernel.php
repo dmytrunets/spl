@@ -29,7 +29,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Evercode\Bundle\PageBundle\EvercodePageBundle(),
-            new Evercode\Bundle\FrontendBundle\EvercodeFrontendBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             

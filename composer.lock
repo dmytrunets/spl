@@ -1,5 +1,5 @@
 {
-    "hash": "70df5c8d73fff5c26dbe1bbb88253843",
+    "hash": "df343ff5488e9f20525726b43e6f64d7",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -523,49 +523,6 @@
                 "orm"
             ],
             "time": "2013-01-07 20:05:04"
-        },
-        {
-            "name": "evercodelab/evercode-frontend-bundle",
-            "version": "dev-master",
-            "target-dir": "Evercode/Bundle/FrontendBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/EvercodeLab/EvercodeFrontendBundle.git",
-                "reference": "be2646fbc3ab1937f8cb31ce87db740085a3b37c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/EvercodeLab/EvercodeFrontendBundle/zipball/be2646fbc3ab1937f8cb31ce87db740085a3b37c",
-                "reference": "be2646fbc3ab1937f8cb31ce87db740085a3b37c",
-                "shasum": ""
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Evercode\\Bundle\\FrontendBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sergey Lunev",
-                    "email": "sergey@lunyov.ru"
-                },
-                {
-                    "name": "Evercode Lab",
-                    "homepage": "http://evercodelab.com/"
-                }
-            ],
-            "description": "Simple Symfony2 Bundle for loading jQuery and twitter-bootstrap",
-            "keywords": [
-                "frontend",
-                "jquery",
-                "twitter-bootstrap"
-            ],
-            "time": "2013-02-20 11:16:09"
         },
         {
             "name": "evercodelab/evercode-page-bundle",
@@ -2987,16 +2944,16 @@
         },
         {
             "name": "guzzle/guzzle",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "v3.3.0"
+                "reference": "v3.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.3.0",
-                "reference": "v3.3.0",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.3.1",
+                "reference": "v3.3.1",
                 "shasum": ""
             },
             "require": {
@@ -3041,7 +2998,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -3076,7 +3033,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-03-04 00:41:45"
+            "time": "2013-03-10 23:05:38"
         },
         {
             "name": "instaclick/php-webdriver",
@@ -3298,7 +3255,6 @@
         "friendsofsymfony/user-bundle": 20,
         "avalanche123/imagine-bundle": 20,
         "evercodelab/evercode-page-bundle": 20,
-        "evercodelab/evercode-frontend-bundle": 20,
         "phpspec/phpspec2": 20,
         "phpspec/php-diff": 20
     },
