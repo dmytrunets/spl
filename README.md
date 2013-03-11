@@ -72,19 +72,6 @@ Tree (добавляет возможность работы с деревьям
 Вот в общем то и всё. Для лучшего понимания работы с Behat лучше всего обратится
 к документации на официальном сайте.
 
-## DataFixtures
-
-Для запуска DoctrineDataFixtures необходимо выполнить следующую команду:
-
-```
-php app/console doctrine:fixtures:load --fixtures=./src/App/DataFixture/
-```
-
-## SonataAdmin
-
-Для использования SonataAdmin необходимо наследовать не стандартный класс
-`Admin`, а тот который представленн в `App\Admin\Base`.
-
 [1]: https://github.com/symfony/symfony-standard
 [2]: https://github.com/l3pp4rd/DoctrineExtensions
 [3]: https://github.com/sonata-project/SonataAdminBundle

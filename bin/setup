@@ -46,4 +46,4 @@ echo "- composer dependencies installed"
 $cmd doctrine:database:drop --force --quiet
 $cmd doctrine:database:create
 $cmd doctrine:migrations:migrate --no-interaction
-$cmd doctrine:fixtures:load --no-interaction --fixtures=./src/App/DataFixture/
+$cmd doctrine:fixtures:load --no-interaction
