@@ -1,3 +1,0 @@
-#!/bin/bash
-sleep 1
-launchy http://localhost:8000/app_dev.php
