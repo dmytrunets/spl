@@ -1,18 +1,16 @@
 # Capifony documentation: http://capifony.org
 # Capistrano documentation: https://github.com/capistrano/capistrano/wiki
 
-# Be more verbose by uncommenting the following line
-# logger.level = Logger::MAX_LEVEL
+logger.level = Logger::MAX_LEVEL
 
 set :application, ""
 set :domain,      ""
 set :deploy_to,   ""
-set :app_path,    ""
 set :user,        ""
 
 role :web,        domain
-role :app,        domain
-role :db,         domain, :primary => true
+role :app,        domain, :primary => true
+role :db,         domain
 
 set :scm,         :git
 set :repository,  ""
@@ -22,34 +20,28 @@ set :deploy_via,  :remote_cache
 ssh_options[:forward_agent] = true
 
 set :use_composer,   true
-set :update_vendors, true
+set :update_vendors, false
+set :dump_assetic_assets, true
 
 set :writable_dirs,     ["app/cache", "app/logs"]
 set :webserver_user,    "www-data"
 set :permission_method, :acl
-
-set :shared_files,    ["app/config/parameters.yml", "web/.htaccess", "web/robots.txt"]
-set :shared_children, ["app/logs"]
+set :use_set_permissions, false
+set :shared_files,    [app_path + "/config/parameters.yml", web_path + "/.htaccess", web_path + "/robots.txt"]
+set :shared_children, [app_path + "/logs", web_path + "/uploads", "vendor"]
 
 set :model_manager, "doctrine"
+set :symfony_env_prod, "prod"
 
 set :use_sudo,    false
 
 set :keep_releases, 3
+after "deploy", "deploy:cleanup"
 
-before 'symfony:composer:update', 'symfony:copy_vendors'
-
-namespace :symfony do
-  desc "Copy vendors from previous release"
-  task :copy_vendors, :except => { :no_release => true } do
-    if Capistrano::CLI.ui.agree("Do you want to copy last release vendor dir then do composer install ?: (y/N)")
-      capifony_pretty_print "--> Copying vendors from previous release"
-
-      run "cp -a #{previous_release}/vendor #{latest_release}/"
-      capifony_puts_ok
-    end
-  end
-end
-
-after "deploy:update", "deploy:cleanup"
-after "deploy", "deploy:set_permissions"
+# For hipchat users
+require 'hipchat/capistrano'
+set :hipchat_token, ""
+set :hipchat_room_name, ""
+set :hipchat_announce, false # notify users
+set :hipchat_color, 'purple' # finished deployment message color
+set :hipchat_failed_color, 'red' # cancelled deployment message color
