@@ -1,16 +1,14 @@
+# This file is auto-generated during the composer install
 parameters:
-    assets_version:    v1
-    database_driver:   pdo_mysql
-    database_host:     localhost
-    database_port:     ~
-    database_name:     symfony
-    database_user:     root
-    database_password: ~
-
-    mailer_transport:  smtp
-    mailer_host:       localhost
-    mailer_user:       ~
-    mailer_password:   ~
-
-    locale:            ru
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: symfony_test_skeleton
+    database_user: root
+    database_password: 123
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: null
+    mailer_password: null
+    locale: ru
+    secret: ThisTokenIsNotSoSecretChangeIt
