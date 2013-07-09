@@ -18,6 +18,7 @@ set :branch,      ""
 set :deploy_via,  :remote_cache
 
 ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
 
 set :use_composer,   true
 set :update_vendors, false
@@ -27,7 +28,7 @@ set :writable_dirs,     ["app/cache", "app/logs"]
 set :webserver_user,    "www-data"
 set :permission_method, :acl
 set :use_set_permissions, false
-set :shared_files,    [app_path + "/config/parameters.yml", web_path + "/.htaccess", web_path + "/robots.txt"]
+set :shared_files,    [app_path + "/config/parameters.yml"]
 set :shared_children, [app_path + "/logs", web_path + "/uploads", "vendor"]
 
 set :model_manager, "doctrine"
