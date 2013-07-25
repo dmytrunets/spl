@@ -25,18 +25,6 @@ for directory in directories; do
 done
 
 
-# set configuration
-if [ ! -e app/config/parameters.yml ]; then
-    cp -n app/config/parameters.yml.dist app/config/parameters.yml
-    echo "- default config copied"
-    if [ ! "$EDITOR" ]; then
-        read -p "enter your favourite editor: " EDITOR
-    fi
-    $EDITOR app/config/parameters.yml
-    echo "- config is set"
-fi
-
-
 # composer stuff
 COMPOSER_BIN=composer
 command -v $COMPOSER_BIN >/dev/null 2>&1 || {
