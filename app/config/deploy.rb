@@ -1,5 +1,6 @@
 # Capifony documentation: http://capifony.org
 # Capistrano documentation: https://github.com/capistrano/capistrano/wiki
+# Tested under capifony v2.2.8
 
 logger.level = Logger::MAX_LEVEL
 
