@@ -1,7 +1,8 @@
 <?php
 
-namespace App\AppBundle\DataFixture\ORM;
+namespace App\AppBundle\DataFixtures\ORM;
 
+use App\AppBundle\Entity\User;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -17,7 +18,7 @@ class LoadAdminData extends AbstractFixture implements FixtureInterface, Contain
     {
         $manipulator = $this->container->get('fos_user.user_manager');
 
-        /** @var $admin example superadmin */
+        /** @var $admin User example superadmin */
         $admin = $manipulator->createUser();
         $admin->setUsername('admin');
         $admin->setEmail('exadmin@email.com');

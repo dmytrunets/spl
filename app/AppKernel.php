@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new Evercode\Bundle\PageBundle\EvercodePageBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
             
             new App\AppBundle\AppBundle(),
         );

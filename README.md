@@ -14,9 +14,11 @@ Tree (добавляет возможность работы с деревьям
 * [KnpMenuBundle][4] — генерация меню
 * [KnpPaginatorBundle][5] — создание пагинации
 * [FosUserBundle][6] — управление пользователями
+* [FOSRestBundle][13] — данный бандл предоставляет набор инструментов для быстрой разработки RESTful API и приложений
 * [DoctrineFixturesBundle][7] — управление фикстурами
 * [DoctrineMigrationsBudnle][8] — управление миграциями
 * [AvalancheImagineBundle][9] — бандл для работы с изображениями
+* [VichUploaderBundle][12] — значительно облегчает с загрузкой файлов и последующего отображения этих файлов
 * [EvercodePageBundle][10] — наш небольшой бандл для создания и отображения 
 простых страниц
 
@@ -81,3 +83,5 @@ Tree (добавляет возможность работы с деревьям
 [9]: https://github.com/avalanche123/AvalancheImagineBundle
 [10]: https://github.com/EvercodeLab/EvercodePageBundle
 [11]: http://behat.org/
+[12]: https://github.com/dustin10/VichUploaderBundle
+[13]: https://github.com/FriendsOfSymfony/FOSRestBundle

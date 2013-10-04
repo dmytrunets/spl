@@ -69,3 +69,6 @@ avalanche_imagine:
     web_root:     %kernel.root_dir%/../web
     driver:       gd
     cache_prefix: uploads/cache
+
+vich_uploader:
+    db_driver: orm
