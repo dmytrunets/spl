@@ -25,7 +25,7 @@ set :use_composer,   true
 set :update_vendors, false
 set :dump_assetic_assets, true
 
-set :writable_dirs,     ["app/cache", "app/logs"]
+set :writable_dirs,     [app_path + "/cache", app_path + "/logs", app_path + "/sessions"]
 set :webserver_user,    "www-data"
 set :permission_method, :acl
 set :use_set_permissions, false
