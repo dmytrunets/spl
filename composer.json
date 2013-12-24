@@ -23,22 +23,23 @@
         "jms/security-extra-bundle": "dev-master",
         "gedmo/doctrine-extensions": "2.3.*",
 
-        "doctrine/doctrine-fixtures-bundle": "2.1.*@dev",
-        "doctrine/data-fixtures": "1.0.*@dev",
-        "doctrine/doctrine-migrations-bundle": "dev-master",
-        "doctrine/migrations": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "~2.2",
+        "doctrine/data-fixtures": "~1.0",
+        "doctrine/doctrine-migrations-bundle": "2.1.*@dev",
+        "doctrine/migrations": "1.0.*@dev",
 
-        "sonata-project/admin-bundle": "2.2.*@dev",
-        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "sonata-project/block-bundle": "2.2.*@dev",
+        "sonata-project/admin-bundle": "~2.2",
+        "sonata-project/core-bundle": "~2.2@dev",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.2",
+        "sonata-project/block-bundle": "~2.2",
 
-        "knplabs/knp-menu-bundle": "1.1.*@dev",
-        "knplabs/knp-paginator-bundle": "2.3.*@dev",
+        "knplabs/knp-menu-bundle": "~1.1",
+        "knplabs/knp-paginator-bundle": "~2.3",
 
         "friendsofsymfony/user-bundle": "2.0.*@dev",
-        "friendsofsymfony/rest-bundle": "1.0.*@dev",
+        "friendsofsymfony/rest-bundle": "~1.0",
         
-        "avalanche123/imagine-bundle": "dev-master",
+        "liip/imagine-bundle": "1.0.*@dev",
         "evercodelab/evercode-page-bundle": "dev-master",
         "vich/uploader-bundle": "dev-master"
     },
