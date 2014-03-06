@@ -34,6 +34,7 @@ set :shared_files,    [app_path + "/config/parameters.yml"]
 set :shared_children, [app_path + "/logs", web_path + "/uploads", "vendor", app_path + "/sessions"]
 
 set :model_manager, "doctrine"
+set :interactive_mode, false
 set :symfony_env_prod, "prod"
 
 set :use_sudo,    false
