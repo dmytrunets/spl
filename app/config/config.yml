@@ -66,10 +66,16 @@ sonata_block:
             contexts:   [admin]
 
 liip_imagine:
-    data_root:    %kernel.root_dir%/../web
-    web_root:     %kernel.root_dir%/../web
+    resolvers:
+        default:
+            web_path:
+                web_root:     %kernel.root_dir%/../web
+                cache_prefix: uploads/cache
+    loaders:
+        default:
+            filesystem:
+                data_root:    %kernel.root_dir%/../web
     driver:       gd
-    cache_prefix: uploads/cache
 
 vich_uploader:
     db_driver: orm
