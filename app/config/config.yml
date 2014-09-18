@@ -79,3 +79,10 @@ liip_imagine:
 
 vich_uploader:
     db_driver: orm
+
+# Hipchat logger configuration
+mannew_hipchat:
+    auth_token: %hipchat_auth_token%
+evercode_hipchat_monolog:
+    name: %hipchat_name%
+    room: %hipchat_room%

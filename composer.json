@@ -42,6 +42,7 @@
         
         "liip/imagine-bundle": "~1.0",
         "evercodelab/evercode-page-bundle": "dev-master",
+        "evercodelab/hipchat-monolog-bundle": "dev-master",
         "vich/uploader-bundle": "dev-master"
     },
     "require-dev": {

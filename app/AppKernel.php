@@ -33,6 +33,8 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+            new Mannew\HipchatBundle\MannewHipchatBundle(),
+            new Evercode\HipchatBundle\EvercodeHipchatMonologBundle(),
             
             new App\AppBundle\AppBundle(),
         );
