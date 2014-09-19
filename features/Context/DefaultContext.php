@@ -2,54 +2,48 @@
 
 namespace Context;
 
-use Behat\Behat\Exception\PendingException;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
+use Behat\Behat\Context\Context;
 use Behat\MinkExtension\Context\RawMinkContext;
-use Behat\Symfony2Extension\Context\KernelAwareInterface;
-use Behat\Behat\Event\SuiteEvent;
-
-use Behat\Behat\Context\Step\Given;
-use Behat\Behat\Context\Step\When;
-use Behat\Behat\Context\Step\Then;
-
-use Behat\MinkExtension\Context\MinkContext;
+use Behat\Symfony2Extension\Context\KernelAwareContext;
+use Behat\Testwork\Hook\Scope\AfterSuiteScope;
+use Behat\Testwork\Hook\Scope\BeforeSuiteScope;
+use Doctrine\DBAL\Connection;
+use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpKernel\KernelInterface;
-
-require_once 'PHPUnit/Autoload.php';
-require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 /**
  * Features context.
  */
-class FeatureContext extends MinkContext implements KernelAwareInterface
+class DefaultContext extends RawMinkContext implements Context, KernelAwareContext
 {
     /**
      * @var \Symfony\Component\HttpKernel\KernelInterface $kernel
      */
     private $kernel = null;
 
-    /** 
-     * @BeforeSuite 
+    /**
+     * @BeforeSuite
+     *
+     * @param BeforeSuiteScope $event
      */
-    public static function setup(SuiteEvent $event)
+    public static function setup(BeforeSuiteScope $event)
     {
         // `php app/console doctrine:database:drop --force --env=test`;
         // `php app/console doctrine:database:create --env=test`;
         // `php app/console doctrine:schema:create --env=test`;
     }
 
-    /** 
-     * @AfterSuite 
+    /**
+     * @AfterSuite
+     *
+     * @param AfterSuiteScope $event
      */
-    public static function teardown(SuiteEvent $event)
+    public static function teardown(AfterSuiteScope $event)
     {
         // `php app/console doctrine:database:drop --force --env=test`;
     }
 
     /**
-     * @param \Behat\Behat\Event\ScenarioEvent|\Behat\Behat\Event\OutlineExampleEvent $event
-     *
      * @AfterScenario
      *
      * @return null
@@ -97,6 +91,7 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
 
     /**
      * Returns EntityManager
+     *
      * @return EntityManager
      */
     private function getEntityManager()
@@ -105,20 +100,18 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
     }
 
     /**
-     * Returns Container instance.
-     *
-     * @return ContainerInterface
-     */
-    private function getContainer()
-    {
-        return $this->kernel->getContainer();
-    }
-
-    /**
      * @return array
      */
     protected function getConnections()
     {
         return $this->getContainer()->get('doctrine')->getConnections();
+    }
+
+    /**
+     * @return \Symfony\Component\DependencyInjection\ContainerInterface
+     */
+    private function getContainer()
+    {
+        return $this->kernel->getContainer();
     }
 }

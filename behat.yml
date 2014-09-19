@@ -1,21 +1,21 @@
 default:
-    formatter:
-        name: progress
-    paths:
-        features: features
-    context:
-        class:  Context\FeatureContext
+    suites:
+        default:
+            paths: [ %paths.base%/features ]
+            contexts:  
+                - Context\DefaultContext 
+                - Behat\MinkExtension\Context\MinkContext
+    formatters:
+        pretty:
+            verbose:  true
+            paths:    false
+            snippets: false
     extensions:
-        Behat\Symfony2Extension\Extension: 
-            mink_driver: true
-            kernel:
-                env: test
-                debug: true
-        Behat\MinkExtension\Extension:
-            base_url: 'http://localhost:8000/app_test.php/'
-            default_session: symfony2
-            goutte: ~
-            selenium2: ~
+        Behat\Symfony2Extension: ~
+        Behat\MinkExtension:
+            sessions:
+               default:
+                   symfony2: ~
 
 # If you want MinkExtension to open browser
 # with last response page every time you have
