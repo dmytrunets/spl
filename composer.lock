@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "668a5a9ae54331b4a7fa552d0c5ff677",
+    "hash": "d9951fe13d01eefbb54b325d17103fb1",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -856,51 +856,6 @@
                 "orm"
             ],
             "time": "2014-07-11 03:05:53"
-        },
-        {
-            "name": "evercodelab/evercode-page-bundle",
-            "version": "dev-master",
-            "target-dir": "Evercode/Bundle/PageBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/EvercodeLab/EvercodePageBundle.git",
-                "reference": "838930040434fee16faaa7956857138e48d895ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/EvercodeLab/EvercodePageBundle/zipball/838930040434fee16faaa7956857138e48d895ef",
-                "reference": "838930040434fee16faaa7956857138e48d895ef",
-                "shasum": ""
-            },
-            "suggest": {
-                "doctrine/doctrine-fixtures-bundle": "to enable fixtures functionality"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Evercode\\Bundle\\PageBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Lapin",
-                    "email": "roman.lapin@gmail.com",
-                    "homepage": "http://victimofbabylon.com/"
-                },
-                {
-                    "name": "Evercode Lab",
-                    "homepage": "http://evercodelab.com/"
-                }
-            ],
-            "description": "Simple Symfony2 Bundle to work with pages",
-            "keywords": [
-                "page"
-            ],
-            "time": "2014-03-13 13:39:44"
         },
         {
             "name": "evercodelab/hipchat-monolog-bundle",
@@ -4483,7 +4438,6 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/migrations": 20,
         "friendsofsymfony/user-bundle": 20,
-        "evercodelab/evercode-page-bundle": 20,
         "evercodelab/hipchat-monolog-bundle": 20,
         "vich/uploader-bundle": 20,
         "liip/functional-test-bundle": 20,

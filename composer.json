@@ -41,7 +41,6 @@
         "friendsofsymfony/rest-bundle": "~1.4",
         
         "liip/imagine-bundle": "~1.0",
-        "evercodelab/evercode-page-bundle": "dev-master",
         "evercodelab/hipchat-monolog-bundle": "dev-master",
         "vich/uploader-bundle": "dev-master"
     },

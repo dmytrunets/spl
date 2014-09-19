@@ -20,19 +20,29 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
+            // Sonata Admin Bundle
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
+
+            // Doctrine Bundles
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-            new Evercode\Bundle\PageBundle\EvercodePageBundle(),
-            new Liip\ImagineBundle\LiipImagineBundle(),
+
+            // User Bundles
+            new FOS\UserBundle\FOSUserBundle(),
+
+            // KNP Bundles
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
+            // Working with files and images
+            new Liip\ImagineBundle\LiipImagineBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+
+            // Logger bundle
             new Mannew\HipchatBundle\MannewHipchatBundle(),
             new Evercode\HipchatBundle\EvercodeHipchatMonologBundle(),
             
@@ -43,10 +53,6 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-        }
-
-        if (in_array($this->getEnvironment(), array('test'))) {
-            $bundles[] = new Liip\FunctionalTestBundle\LiipFunctionalTestBundle();
         }
 
         return $bundles;
