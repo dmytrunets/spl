@@ -17,10 +17,8 @@ Tree (добавляет возможность работы с деревьям
 * [FOSRestBundle][13] — данный бандл предоставляет набор инструментов для быстрой разработки RESTful API и приложений
 * [DoctrineFixturesBundle][7] — управление фикстурами
 * [DoctrineMigrationsBudnle][8] — управление миграциями
-* [AvalancheImagineBundle][9] — бандл для работы с изображениями
+* [LiipImagineBundle][9] — бандл для работы с изображениями
 * [VichUploaderBundle][12] — значительно облегчает с загрузкой файлов и последующего отображения этих файлов
-* [EvercodePageBundle][10] — наш небольшой бандл для создания и отображения 
-простых страниц
 
 ## Установка
 
@@ -72,6 +70,9 @@ Tree (добавляет возможность работы с деревьям
 Вот в общем то и всё. Для лучшего понимания работы с Behat лучше всего обратится
 к документации на официальном сайте.
 
+Так же для используем [phpspec][14] для спеков (на самом деле надо понимать, что
+мы используем их как юнит тесты, только тссссс!).
+
 [1]: https://github.com/symfony/symfony-standard
 [2]: https://github.com/l3pp4rd/DoctrineExtensions
 [3]: https://github.com/sonata-project/SonataAdminBundle
@@ -80,8 +81,8 @@ Tree (добавляет возможность работы с деревьям
 [6]: https://github.com/FriendsOfSymfony/FOSUserBundle
 [7]: https://github.com/doctrine/DoctrineFixturesBundle
 [8]: https://github.com/doctrine/DoctrineMigrationsBundle
-[9]: https://github.com/avalanche123/AvalancheImagineBundle
-[10]: https://github.com/EvercodeLab/EvercodePageBundle
+[9]: https://github.com/liip/LiipImagineBundle
 [11]: http://behat.org/
 [12]: https://github.com/dustin10/VichUploaderBundle
 [13]: https://github.com/FriendsOfSymfony/FOSRestBundle
+[14]: http://www.phpspec.net/
