@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
 
             // Doctrine Bundles
