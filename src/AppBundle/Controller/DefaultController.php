@@ -10,10 +10,9 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="_index")
-     * @Template()
      */
     public function indexAction()
     {
-        return[];
+        return $this->render("Default/index.html.twig", []);
     }
 }
