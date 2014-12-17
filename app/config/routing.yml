@@ -33,8 +33,3 @@ fos_user_change_password:
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
-
-EvercodePageBundle:
-    resource: "@EvercodePageBundle/Controller/"
-    type:     annotation
-    prefix:   /

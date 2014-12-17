@@ -57,7 +57,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: App\AppBundle\Entity\User
+    user_class: AppBundle\Entity\User
 
 sonata_block:
     default_contexts: [cms]

@@ -6,7 +6,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * App\AppBundle\Entity\User
+ * AppBundle\Entity\User
  *
  * @ORM\Table(name="users")
  * @ORM\Entity
