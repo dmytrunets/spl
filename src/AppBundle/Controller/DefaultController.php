@@ -1,6 +1,6 @@
 <?php
 
-namespace App\AppBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -10,10 +10,9 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="_index")
-     * @Template()
      */
     public function indexAction()
     {
-        return[];
+        return $this->render("Default/index.html.twig", []);
     }
 }

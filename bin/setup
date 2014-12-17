@@ -34,6 +34,8 @@ command -v $COMPOSER_BIN >/dev/null 2>&1 || {
 }
 $COMPOSER_BIN install
 echo "- composer dependencies installed"
+$COMPOSER_BIN dump-autoload --optimize
+echo "- composer autoload optimized"
 
 
 # databases stuff

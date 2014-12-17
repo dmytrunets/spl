@@ -1,6 +1,6 @@
 <?php
 
-namespace App\AppBundle\Admin;
+namespace AppBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -11,6 +11,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 class UserAdmin extends Admin
 {
     protected $translationDomain = 'SonataAdmin';
+
+    protected $baseRouteName = "user";
+    protected $baseRoutePattern = "admin_user";
 
     public function configureShowFields(ShowMapper $showMapper)
     {
