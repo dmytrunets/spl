@@ -45,7 +45,7 @@ class AppKernel extends Kernel
             new Mannew\HipchatBundle\MannewHipchatBundle(),
             new Evercode\HipchatBundle\EvercodeHipchatMonologBundle(),
             
-            new App\AppBundle\AppBundle(),
+            new AppBundle\AppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

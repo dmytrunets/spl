@@ -4,7 +4,7 @@
     "type": "project",
     "description": "The \"Symfony Evercodelab Edition\" skeleton with basic configuration",
     "autoload": {
-        "psr-0": { "": "src/", "Context": "features/" }
+        "psr-0": { "": "src/" }
     },
     "require": {
         "php": ">=5.4",
@@ -17,7 +17,6 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
-        "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         
         "jms/security-extra-bundle": "~1.5",
@@ -43,6 +42,7 @@
         "vich/uploader-bundle": "~0.14"
     },
     "require-dev": {
+        "sensio/generator-bundle": "~2.3",
         "liip/functional-test-bundle": "~1.0"
     },
     "scripts": {
@@ -73,7 +73,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.4-dev"
+            "dev-master": "2.6-dev"
         }
     }
 }
