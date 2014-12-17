@@ -22,6 +22,8 @@ framework:
     session:
         save_path: "%kernel.root_dir%/sessions/"
     fragments:       ~
+    # Click-to-file in Symfony excpetions: open file with exception in editor (default PHPStorm)
+    # ide: "phpstorm://open?file=%%f&line%%l"
 
 twig:
     debug:            %kernel.debug%
