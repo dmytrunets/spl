@@ -14,3 +14,4 @@ bin/webunit*
 !bin/behat_run
 bin/doctrine*
 bin/php-cs-fixer
+bin/phpunit

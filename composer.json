@@ -9,7 +9,7 @@
     "require": {
         "php": ">=5.4",
         "symfony/symfony": "~2.6",
-        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/orm": "~2.4",
         "doctrine/doctrine-bundle": "~1.2",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
@@ -43,7 +43,8 @@
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
-        "liip/functional-test-bundle": "~1.0"
+        "liip/functional-test-bundle": "~1.0",
+        "phpunit/phpunit": "4.5.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
