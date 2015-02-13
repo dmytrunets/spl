@@ -1,5 +1,6 @@
 app/cache/*
 app/logs/*
+app/sessions/*
 app/*.cache
 app/config/parameters.yml
 web/bundles/*
