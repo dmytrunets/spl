@@ -42,7 +42,8 @@
 
         "liip/imagine-bundle": "~1.2",
         "evercodelab/hipchat-monolog-bundle": "dev-master",
-        "vich/uploader-bundle": "~0.14"
+        "vich/uploader-bundle": "~0.14",
+        "ircmaxell/password-compat": "~1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
