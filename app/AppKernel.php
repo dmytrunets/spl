@@ -45,6 +45,9 @@ class AppKernel extends Kernel
             new Mannew\HipchatBundle\MannewHipchatBundle(),
             new Evercode\HipchatBundle\EvercodeHipchatMonologBundle(),
             
+            // Apc management on deploy
+            new Ornicar\ApcBundle\OrnicarApcBundle(),
+
             new AppBundle\AppBundle(),
         );
 

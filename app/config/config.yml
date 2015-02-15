@@ -89,3 +89,7 @@ mannew_hipchat:
 evercode_hipchat_monolog:
     name: %hipchat_name%
     room: %hipchat_room%
+
+ornicar_apc:
+      host: %apc_host%
+      web_dir: %kernel.root_dir%/../web

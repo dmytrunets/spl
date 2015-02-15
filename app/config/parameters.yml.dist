@@ -18,3 +18,5 @@ parameters:
     hipchat_auth_token: YOU_TOKEN_GOSE_HERE
     hipchat_name:       HipchatReporterName
     hipchat_room:       HipchatRoom
+
+    apc_host: 'http://domain.evercodelab.com'
