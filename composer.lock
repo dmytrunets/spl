@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec68d71148560a38a6437fd3dfa48053",
+    "hash": "4cbe43c46896164077e10efb3c1e7236",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -907,16 +907,16 @@
         },
         {
             "name": "doctrine/migrations",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "27edc388296a3cffc7c30942a7613abb4998701c"
+                "reference": "3a787de7c4a64460436dc2eb2e3cde8920d5fadd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/27edc388296a3cffc7c30942a7613abb4998701c",
-                "reference": "27edc388296a3cffc7c30942a7613abb4998701c",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/3a787de7c4a64460436dc2eb2e3cde8920d5fadd",
+                "reference": "3a787de7c4a64460436dc2eb2e3cde8920d5fadd",
                 "shasum": ""
             },
             "require": {
@@ -942,7 +942,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "v1.0.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -970,7 +970,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-08-19 08:37:47"
+            "time": "2015-07-29 20:43:19"
         },
         {
             "name": "doctrine/orm",
@@ -1047,7 +1047,7 @@
         },
         {
             "name": "evercodelab/hipchat-monolog-bundle",
-            "version": "dev-master",
+            "version": "1.0.2",
             "target-dir": "Evercode/HipchatBundle",
             "source": {
                 "type": "git",
@@ -2651,6 +2651,60 @@
             ],
             "description": "A security checker for your composer.lock",
             "time": "2015-08-11 12:11:25"
+        },
+        {
+            "name": "smart-core/accelerator-cache-bundle",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smart-Core/AcceleratorCacheBundle.git",
+                "reference": "8664ac12da10faab76a3b3cdd861997f88530f01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smart-Core/AcceleratorCacheBundle/zipball/8664ac12da10faab76a3b3cdd861997f88530f01",
+                "reference": "8664ac12da10faab76a3b3cdd861997f88530f01",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.1",
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0": "1.0.x-dev",
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SmartCore\\Bundle\\AcceleratorCacheBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thibault Duplessis",
+                    "homepage": "https://github.com/ornicar"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/Smart-Core/AcceleratorCacheBundle/contributors"
+                }
+            ],
+            "description": "Provides a command line task to clear PHP Accelerators cache from the console",
+            "homepage": "https://github.com/Smart-Core/AcceleratorCacheBundle",
+            "keywords": [
+                "Opcache",
+                "apc",
+                "task",
+                "wincache"
+            ],
+            "time": "2015-01-21 15:47:44"
         },
         {
             "name": "sonata-project/admin-bundle",
@@ -4561,10 +4615,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "doctrine/migrations": 20,
         "doctrine/doctrine-migrations-bundle": 20,
         "friendsofsymfony/user-bundle": 20,
-        "evercodelab/hipchat-monolog-bundle": 20,
         "phpunit/phpunit": 20
     },
     "prefer-stable": true,

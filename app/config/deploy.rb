@@ -49,13 +49,13 @@ require "whenever/capistrano"
 set :whenever_command, "whenever --load-file app/config/schedule.rb --set environment=#{symfony_env_prod}"
 
 namespace :symfony do
-  desc "Clear apc cache"
-  task :clear_apc do
-    capifony_pretty_print "--> Clear apc cache"
-    run "#{try_sudo} sh -c 'cd #{current_path} && #{php_bin} #{symfony_console} apc:clear --env=#{symfony_env_prod}'"
+  desc "Clear accelerator cache"
+  task :clear_accelerator_cache do
+    capifony_pretty_print "--> Clear accelerator cache"
+    run "#{try_sudo} sh -c 'cd #{latest_release} && #{php_bin} #{symfony_console} cache:accelerator:clear #{console_options}'"
     capifony_puts_ok
   end
 end
 
-after "deploy", "symfony:clear_apc"
-after "deploy:rollback:cleanup", "symfony:clear_apc"
+after "deploy", "symfony:clear_accelerator_cache"
+after "deploy:rollback:cleanup", "symfony:clear_accelerator_cache"

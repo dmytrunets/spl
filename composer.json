@@ -26,11 +26,11 @@
         "jms/security-extra-bundle": "~1.5",
         "gedmo/doctrine-extensions": "~2.3",
 
-        "doctrine/migrations": "dev-master",
+        "doctrine/migrations": "~1.0",
         "doctrine/doctrine-migrations-bundle": "2.1.*@dev",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
 
-        "ornicar/apc-bundle": "~1.0",
+        "smart-core/accelerator-cache-bundle": "^1.0",
 
         "sonata-project/admin-bundle": "~2.3",
         "sonata-project/doctrine-orm-admin-bundle": "~2.3",
@@ -41,7 +41,7 @@
         "friendsofsymfony/user-bundle": "2.0.x-dev",
 
         "liip/imagine-bundle": "~1.2",
-        "evercodelab/hipchat-monolog-bundle": "dev-master",
+        "evercodelab/hipchat-monolog-bundle": "~1.0.2",
         "vich/uploader-bundle": "~0.14",
         "ircmaxell/password-compat": "~1.0"
     },
