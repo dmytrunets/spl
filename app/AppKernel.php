@@ -44,10 +44,12 @@ class AppKernel extends Kernel
             // Logger bundle
             new Mannew\HipchatBundle\MannewHipchatBundle(),
             new Evercode\HipchatBundle\EvercodeHipchatMonologBundle(),
-            
-            // Apc management on deploy
-            new Ornicar\ApcBundle\OrnicarApcBundle(),
 
+//            new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+            // Apc management on deploy
+//            new Ornicar\ApcBundle\OrnicarApcBundle(),
+
+            new UserBundle\UserBundle(),
             new AppBundle\AppBundle(),
         );
 

@@ -1,0 +1,115 @@
+{% extends 'Account/layout.html.twig' %}
+
+{% set title ='Создать тендер на проведение игры' %}
+
+{% block content %}
+    {{ parent() }}
+<div class="container">
+    <div class="row">
+
+            <form action="{{ path('_post_new_tender') }}" method="post">
+                <h3>Где</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="" class="col-sm-2 col-form-label">Город</label>
+                        <div class="col-sm-10">
+                            <select name="city">
+                                <option value="1">Киев</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="" class="col-sm-2 col-form-label">Район</label>
+                        <div class="col-sm-10">
+                            <select name="district">
+                                <option value="1">Святошинский</option>
+                                <option value="2">Соломенский</option>
+                                <option value="3">Деснянский</option>
+                                <option value="4">Дарницкий</option>
+                                <option value="5">Подольский</option>
+                                <option value="6">Оболонский</option>
+                                <option value="7">Днепровский</option>
+                                <option value="8">Шевченковский</option>
+                                <option value="9">Печерский</option>
+                                <option value="10">Голосеевский</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-md-6 col-form-label">Координаты площадки</label>
+                    <div class="col-md-6">
+                        <input type="text" name="geo_point" value="" placeholder="50.512386, 30.485894">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            Как узнать координаты
+                        </button>
+                    </div>
+                </div>
+
+
+                <h3>Когда</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                            <label for="" class="col-sm-2 col-form-label">Дата</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="date" value="" placeholder="{{ "now"|date("Y-m-d") }}">
+                            </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="" class="col-sm-2 col-form-label">Время</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="time" value="" placeholder="09:00">
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Как</h3>
+
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Количество команд</label>
+                    <div class="col-sm-10">
+                        <select name="max_team">
+                            <option value="1">Встреча 1х1</option>
+                            <option value="1" disabled>До 3 команд</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Игроков на поле</label>
+                    <div class="col-sm-10">
+                        <select name="max_player">
+                            <option value="1">5х5</option>
+                            <option value="1" disabled>11х11</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <input type="submit" name="send" value="Отправить" class="btn btn-primary">
+                </div>
+            </form>
+</div>
+</div>
+
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Узнать координаты площадки</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    1. Откройте <a href="https://goo.gl/maps/mxmoFovGVw72" target="_blank">Google maps</a>
+                    <br>2. Установитье точку на карте где расположено поле для игры
+                    <br>3. Скопируйте координаты (Например 50.512386, 30.485894)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Я понял</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

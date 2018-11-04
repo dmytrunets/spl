@@ -1,0 +1,46 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST"
+      class="fos_user_registration_register">
+    {#{{ form_widget(form) }}#}
+
+    <div id="fos_user_registration_form">
+        <div class="form-group"><label for="fos_user_registration_form_email" class="required">Электронная почта:</label>
+            <input class="form-control"
+                    type="email"
+                   id="fos_user_registration_form_email"
+                   name="fos_user_registration_form[email]"
+                   required="required">
+            <span>{{ form_errors(form.email) }}</span>
+        </div>
+        <div class="form-group">
+            <label for="fos_user_registration_form_username" class="required">Имя пользователя:</label>
+            <input class="form-control" type="text"
+                   id="fos_user_registration_form_username"
+                   name="fos_user_registration_form[username]"
+                   required="required"
+                   maxlength="255"
+                   pattern=".{2,}">
+            <span>{{ form_errors(form.username) }}</span>
+        </div>
+        <div class="form-group"><label for="fos_user_registration_form_plainPassword_first" class="required">Пароль:</label>
+            <input class="form-control"
+                   type="password" id="fos_user_registration_form_plainPassword_first"
+                   name="fos_user_registration_form[plainPassword][first]" required="required">
+            <span>{{ form_errors(form.plainPassword.first) }}</span>
+        </div>
+        <div class="form-group"><label for="fos_user_registration_form_plainPassword_second" class="required">Подтвердите пароль:</label>
+            <input class="form-control"
+                   type="password" id="fos_user_registration_form_plainPassword_second"
+                   name="fos_user_registration_form[plainPassword][second]" required="required">
+            <span>{{ form_errors(form.plainPassword.second) }}</span>
+        </div>
+
+        {{ form_widget(form._token) }}
+
+    </div>
+    <div>
+        <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}"/>
+    </div>
+
+</form>

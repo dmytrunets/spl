@@ -1,5 +1,62 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Evercoder!</h1>
+    <h1>Предложения</h1>
+    {#<h1>Где и с кем в Киеве поиграть в футбол</h1>#}
+
+    {#<form name="searchmain" action="{{ path('list') }}" method="POST">#}
+        {#Город:#}
+        {#<select name="city">#}
+            {#<option value="1">Киев</option>#}
+        {#</select>#}
+        {#Район:#}
+        {#<select name="district">#}
+            {#<option value="0">-- все районы -- </option>#}
+            {#<option value="1">Святошинский</option>#}
+            {#<option value="2">Соломенский</option>#}
+            {#<option value="3">Деснянский</option>#}
+            {#<option value="4">Дарницкий</option>#}
+            {#<option value="5">Подольский</option>#}
+            {#<option value="6">Оболонский</option>#}
+            {#<option value="7">Днепровский</option>#}
+            {#<option value="8">Шевченковский</option>#}
+            {#<option value="9">Печерский</option>#}
+            {#<option value="10">Голосеевский</option>#}
+        {#</select>#}
+        {#Дата: <input type="text" name="date" value="2018-03-28">#}
+        {#Время:#}
+        {#<select name="time_block">#}
+            {#<option value="1">Утро 6-11</option>#}
+            {#<option value="2">Обед 12-17</option>#}
+            {#<option value="3">Вечер 17-24</option>#}
+        {#</select>#}
+        {#<input type="submit" class="btn btn-primary" value="Поиск">#}
+    {#</form>#}
+
+    <a href="{{ path('_post_new_tender') }}"><input type="submit" class="btn btn-danger" value="Предложить игру"></a>
+
+    <table width="80%" align="center" class="table">
+        {% for item in pagination %}
+            {% set team = item.getOrganizer().getTeam() %}
+        <tr>
+            <td>
+                <a href="{{ path('_view_tender', {'tender_id': item.id}) }}">{{ item.getTitle() }}</a>
+                <br>Когда: {{ item.datetime|date('d/m H:i') }}
+                <br>Где: Киев, Киевская область, {{ item.getDistrictName() }}
+                <a href="https://www.google.com.ua/maps?q={{ item.getGeoPoint() }}" target="_blank">{{ item.getGeoPoint() }}</a>
+                <br>C кем: <a href="{{ path('_team_page', {'team_id': team.id }) }}">{{ team.getTitle() }}</a>
+            </td>
+            <td>
+                {#<a href="{{ path('_send_message', {'tender_id': item.id}) }}"><input type="button" value="Написать автору" class="btn btn-outline-info"></a>#}
+                {#<br><input type="button" value="Позвонить" class="btn btn-outline-info">#}
+                <br>
+                <a href="{{ path('_ask_query', {'tender_id': item.id}) }}"><input type="button" value="Подать заявку на игру" class="btn btn-outline-info"></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 {% endblock %}

@@ -90,6 +90,6 @@ evercode_hipchat_monolog:
     name: %hipchat_name%
     room: %hipchat_room%
 
-accelerator_cache:
-      host: %apc_host%
-      web_dir: %kernel.root_dir%/../web
+#accelerator_cache:
+#      host: %apc_host%
+#      web_dir: %kernel.root_dir%/../web

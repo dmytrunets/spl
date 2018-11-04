@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Сыгранные матчи</h1>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Профиль</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ path('_list_closed_games') }}">Сыгранные матчи</a>
+        </li>
+    </ul>
+
+    <table width="80%" align="center" class="table">
+        {% for item in pagination %}
+            {% set team = item %}
+            <tr>
+                <td>
+                    <a href="{{ path('_view_tender', {'tender_id': item.id}) }}">{{ item.getTitle() }}</a>
+                    <br>Когда: {{ item.datetime|date('d/m H:i') }}
+                    <br>Где: Киев, Киевская область, {{ item.getDistrictName() }}
+                    <a href="https://www.google.com.ua/maps?q={{ item.getGeoPoint() }}" target="_blank">{{ item.getGeoPoint() }}</a>
+                    <br>C кем: <a href="{{ path('_team_page', {'team_id': team.id }) }}">{{ team.getTitle() }}</a>
+                </td>
+                <td>
+                    <select name="score">
+                        <option value="1">★</option>
+                        <option value="2">★★</option>
+                        <option value="3">★★★</option>
+                        <option value="4">★★★★</option>
+                        <option value="5" selected>★★★★★</option>
+                    </select>
+                    <input type="button" value="Отправить">
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

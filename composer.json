@@ -1,8 +1,8 @@
 {
-    "name": "evercodelab/symfony-skeleton",
+    "name": "dmytrunets/spl",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Evercodelab Edition\" skeleton with basic configuration",
+    "description": "Service for organize sports events",
     "autoload": {
         "psr-0": { "": "src/" }
     },

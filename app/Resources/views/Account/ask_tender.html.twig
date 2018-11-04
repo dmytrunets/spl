@@ -1,0 +1,47 @@
+{% extends 'Account/layout.html.twig' %}
+
+{% block title %}Мои заявки{% endblock %}
+
+{% set title ='Мои заявки' %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="alert alert-info" role="alert">
+        Подавайте заявки на игру и ожидайте подверждения своей заявки от команды организатора в течении 24 часов.
+    </div>
+    <table class="table">
+        <tbody>
+        {% for request in pagination %}
+            {% set item = request.tender  %}
+            <tr>
+                <td>
+                    <dl class="row">
+                        <dt class="col-sm-3"><a href="{{ path('_view_tender', {'tender_id': item.id}) }}">{{ item.getTitle() }}</a></dt>
+                        <dd class="col-sm-9"></dd>
+
+                        <dt class="col-sm-3">Когда</dt>
+                        <dd class="col-sm-9">{{ item.datetime|date('d/m H:i') }}</dd>
+
+                        <dt class="col-sm-3">Где</dt>
+                        <dd class="col-sm-9">Киев, Киевская область, {{ item.getDistrictName() }}<a href="https://www.google.com.ua/maps?q={{ item.getGeoPoint() }}" target="_blank">{{ item.getGeoPoint() }}</a></dd>
+
+                        <dt class="col-sm-3">С кем</dt>
+                        <dd class="col-sm-9"><a href="{{ path('_team_page', {'team_id':item.organizer.team.id }) }}">{{ item.organizer.team.title }}</a></dd>
+                    </dl>
+                </td>
+                <td>
+                    Сообщения: 0
+                </td>
+                <td>
+                    Статус: <b>{{ request.getStatusTitle() }}</b>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+{% endblock %}

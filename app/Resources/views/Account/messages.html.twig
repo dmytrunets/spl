@@ -1,0 +1,32 @@
+{% extends 'Account/layout.html.twig' %}
+
+{% block title %}Сообщения{% endblock %}
+
+{% set title ='Сообщения' %}
+
+{% block content %}
+    {{ parent() }}
+
+    <table width="80%" class="table">
+        <tr>
+            <td>#</td>
+            <td>Пользователь</td>
+            <td>Заявка</td>
+            <td>Отправлено</td>
+        </tr>
+
+        {% for item in messages %}
+            {% set message = item[0] %}
+            <tr>
+                <td>#</td>
+                <td>{{ message.sender.getManager() }} {{ message.sender.getTitle() }} ({{ item.count_msg }})</td>
+                <td>
+                    {% set organizer = message.tender.getOrganizer().getTeam() %}
+                    <a href="{{ path('_view_tread', {'tread_id':message.treadId }) }}"><b>{{ message.tender.getTitle() }} {{ message.tender.datetime|date('d/m H:i')}} c {{ organizer.getTitle() }}</b></a>
+                </td>
+                <td>{{ message.createdAt|date('d/m H:i') }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

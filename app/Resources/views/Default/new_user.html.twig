@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Создать нового пользователя</h1>
+
+    <table width="100%">
+        <tr>
+            <td>
+                <form name="new_user" action="#">
+                    <br>Email: <input type="text" name="login" value="usamocom@ukr.net">
+                    <br>Пароль: <input type="password" name="password" value="Usamo80971069950">
+                    <br>Выбрать город: <input type="text" name="location" value="Киев, Киевская область, Оболонский">
+                    <br>Контактное лицо: <input type="text" name="name" value="Юрий">
+                    <br>Телефон: <input type="text" name="phone" value="0992907643">
+                    <br>Название комманды: <input type="text" name="team_name" value="Сборная Киева">
+                    <br>Состав команды: <textarea name="players" rows="7" cols="10">
+                        Коля
+                        Дима
+                        Юра
+                        Саша
+                    </textarea>
+                    <br><input type="submit" name="send" value="Отправить">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Отправить сообщение пользователю{% endblock %}
+
+{% set title ='Send message' %}
+
+{% block content %}
+    {% set organizer = tender.getOrganizer().getTeam() %}
+    <h1>{{ tender.getTitle() }} {{ tender.datetime|date('d/m H:i')}} c {{ organizer.getTitle() }}</h1>
+
+
+    Текст Вашего сообщения для менеджера команды <b>{{ organizer.manager }}</b>
+    {% if organizer.phone is not null %}
+        (тел. {{ organizer.phone }})
+    {% endif %}
+
+    <form action="{{ path('_send_message', {'tender_id': tender.id}) }}" method="post">
+        Текст сообщения:
+        <textarea name="content" placeholder="Текст сообщения"></textarea>
+        <input type="submit" value="Отправить">
+    </form>
+
+{% endblock %}

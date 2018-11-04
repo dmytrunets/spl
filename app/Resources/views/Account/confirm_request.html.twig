@@ -1,0 +1,27 @@
+{% extends 'Account/layout.html.twig' %}
+
+{% block content %}
+
+    {% set organizer = tender.getOrganizer().getTeam() %}
+    <h1>{{ tender.getTitle() }} {{ tender.datetime|date('d/m H:i')}} c {{ organizer.getTitle() }}</h1>
+
+    Выберите одну команду
+    <table width="80%">
+        <tr>
+            <td>#</td>
+            <td>Название команды</td>
+            <td>Действия</td>
+        </tr>
+        {% for request in requests %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><a href="{{ path('_team_page', {'team_id': request.team.id }) }}">{{ request.team.title }}</a></td>
+                <td>
+                    <a href="{{ path('_confirm_request',{'tender_id': request.tender.id,'request_id':request.id}) }}"><button type="button" class="btn btn-success">Подтвердить</button></a>
+                    <a href="{{ path('_reject_request',{'tender_id': request.tender.id,'request_id':request.id}) }}"><button type="button" class="btn btn-danger">Отклонить</button></a>
+                    через 05:12 заявка автоматически будет отклонена
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

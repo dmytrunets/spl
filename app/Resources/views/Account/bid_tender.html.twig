@@ -1,0 +1,74 @@
+{% extends 'Account/layout.html.twig' %}
+
+{% block title %}Мои предложения{% endblock %}
+
+{% set title ='Мои предложения' %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="alert alert-info" role="alert">
+        - Создавайте тендер на проведение матча и ожидайте заявок от других команд. Когда заявок от команд будет больше 0, у Вас появиться возможность выбрать с кем Вы будет играть.
+        <br>- За 24 часа до игры прием заявок прекращается, и если за 24 часа до игры команда соперник не выбрана, тендер деактивируется автоматически.
+        <br>- У Вас есть 24 часа чтобы отреагировать на новую заявку от команды, иначе заявка будет отклонена автоматически.
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Игра</th>
+            <th scope="col">Сообщения</th>
+            <th scope="col">Сообщения</th>
+            <th scope="col">Заявок от команд</th>
+        </tr>
+        <thead>
+        {% for item in pagination %}
+            {% set tender = item[0]  %}
+            <tr>
+                <td>
+                    <dl class="row">
+                        <dt class="col-sm-3"><a href="{{ path('_view_tender', {'tender_id': tender.id}) }}">{{ tender.getTitle() }}</a></dt>
+                        <dd class="col-sm-9"></dd>
+
+                        <dd class="col-sm-3">Когда</dd>
+                        <dd class="col-sm-9">{{ tender.datetime|date('d/m H:i') }}</dd>
+
+                        <dd class="col-sm-3">Где</dd>
+                        <dd class="col-sm-9">Киев, Киевская область <a href="https://www.google.com.ua/maps?q={{ tender.getGeoPoint() }}" target="_blank">{{ tender.getGeoPoint() }}</a></dd>
+
+                        <dd class="col-sm-3">Соперник</dd>
+                        <dd class="col-sm-9">
+                            {% if formatted[tender.id] is defined %}
+                                {% for request in formatted[tender.id] %}
+                                    <a href="{{ path('_team_page', {'team_id':request.getTeam().getId() }) }}">{{ request.getTeam().getTitle() }} </a>;
+                                {% endfor %}
+                            {% else %}
+                                Не выбран
+                            {% endif %}
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    {% if formatted[tender.id] is defined %}
+                        Явка объязательна
+                    {% else %}
+                        <button type="button" class="btn btn-secondary">Деактивировать</button>
+                    {% endif %}
+                </td>
+                <td>
+                    0
+                </td>
+                <td>
+                    {{ item.r_count }}
+
+                    {% if item.r_count and formatted[tender.id] is not defined %}
+                        <a href="{{ path('_request_list', {'tender_id': tender.id}) }}">Выбрать команду</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+{% endblock %}

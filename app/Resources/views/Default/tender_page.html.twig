@@ -1,0 +1,50 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% set organizer = tender.getOrganizer().getTeam() %}
+    <h1>{{ tender.getTitle() }} {{ tender.datetime|date('d/m H:i')}} c {{ organizer.getTitle() }}</h1>
+
+    <a href="{{ path('_send_message', {'tender_id':tender.id}) }}"><input type="button" value="Написать автору"></a>
+    <a href="#"><input type="button" value="Показать телефон"></a>
+    <a href="{{ path('_ask_query', {'tender_id': tender.id}) }}"><input type="button" value="Подать заявку на игру"></a>
+
+
+    <br>Организатор: {{ organizer.manager }}
+    <br>
+    <br>
+
+    <br>Где: Киев, Киевская область, {{ tender.getDistrictName() }}
+    <a href="https://www.google.com.ua/maps?q={{ tender.getGeoPoint() }}" target="_blank">{{ tender.getGeoPoint() }}</a>
+
+    <div id="map"></div>
+
+    <br>
+    <br>
+
+    <style>
+        #map {
+            width: 500px;
+            height: 400px;
+            background-color: grey;
+        }
+    </style>
+
+    <script>
+        function initMap() {
+            var uluru = {lat: {{ tender.getGeoPoint('lat') }}, lng: {{ tender.getGeoPoint('lng') }}};
+            {#var uluru = { {{ tender.getGeoPoint('lat') }} };#}
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfpMQHaHeEcRzw77jMib7hc4QSe0HY5qM&callback=initMap">
+    </script>
+
+{% endblock %}

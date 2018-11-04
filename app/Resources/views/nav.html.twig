@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="/app_dev.php">Sport League</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/app_dev.php/">Главная <span class="sr-only">(current)</span></a>
+            </li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ app.user.username }}
+                    {#<span class="badge badge-light">4</span>#}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('_edit_profile') }}">Аккаунт</a>
+                    <a class="dropdown-item" href="{{ path('_post_new_tender') }}">Предложить игру</a>
+                    <a class="dropdown-item" href="{{ path('_my_account') }}">Мои предложения</a>
+                    <a class="dropdown-item" href="{{ path('_ask_tender') }}">Мои заявки</a>
+                    <a class="dropdown-item" href="{{ path('_list_messages') }}">Сообщения</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">Выйти</a>
+                </div>
+            </li>
+            {% else %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('fos_user_security_login') }}">Мой профиль</a>
+                </li>
+
+            {% endif %}
+            <li class="nav-item">
+                {#<a class="nav-link" href="{{ path('fos_user_security_login') }}">Создать заявку</a>#}
+                <a class="nav-link" href="{{ path('_post_new_tender') }}"><input type="submit" class="btn btn-danger btn-sm" value="Предложить игру"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{#<section class="jumbotron text-center">#}
+    {#<div class="container">#}
+        {#<h1 class="jumbotron-heading">SPL - Где и с кем в Киеве поиграть в футбол</h1>#}
+        {#<p class="lead text-muted mb-0">Сервис для организации футбольних матчей</p>#}
+    {#</div>#}
+{#</section>#}
+{#<div class="alert alert-primary" role="alert">#}
+    {#Вы получили новую заявку от команды на Ваш тендер#}
+{#</div>#}
+{#<div class="alert alert-primary" role="alert">#}
+    {#Вы получили новое сообщение от команды#}
+{#</div>#}
+{#<div class="alert alert-primary" role="alert">#}
+    {#Ваша заявка на игру подтверждена командой организатором#}
+{#</div>#}
+{#<div class="alert alert-primary" role="alert">#}
+    {#У Вас запланированна игра на завтра#}
+{#</div>#}
+
+{% for flashMessage in app.session.flashbag.get('error') %}
+
+    {{ flashMessage }}
+
+{% endfor %}
