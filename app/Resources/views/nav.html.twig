@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="/app_dev.php">Sport League</a>
+    <a class="navbar-brand" href="{{ path('list') }}">Sport League</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/app_dev.php/">Главная <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ path('list') }}">Главная <span class="sr-only">(current)</span></a>
             </li>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             <li class="nav-item active dropdown">
