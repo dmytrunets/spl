@@ -28,9 +28,6 @@ class Version20181123210256 extends AbstractMigration
   KEY `IDX_B6BD307F9245DE54` (`tender_id`),
   KEY `IDX_B6BD307FA49A1E65` (`sender_team_id`),
   KEY `IDX_B6BD307F5455E90C` (`receiver_team_id`),
-  CONSTRAINT `FK_B6BD307F5455E90C` FOREIGN KEY (`receiver_team_id`) REFERENCES `team` (`id`),
-  CONSTRAINT `FK_B6BD307F9245DE54` FOREIGN KEY (`tender_id`) REFERENCES `tender` (`id`),
-  CONSTRAINT `FK_B6BD307FA49A1E65` FOREIGN KEY (`sender_team_id`) REFERENCES `team` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
         ");
 
@@ -44,8 +41,6 @@ CREATE TABLE IF NOT EXISTS `request` (
   PRIMARY KEY (`id`),
   KEY `IDX_3B978F9F9245DE54` (`tender_id`),
   KEY `IDX_3B978F9F296CD8AE` (`team_id`),
-  CONSTRAINT `FK_3B978F9F296CD8AE` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`),
-  CONSTRAINT `FK_3B978F9F9245DE54` FOREIGN KEY (`tender_id`) REFERENCES `tender` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;      
         ");
 
@@ -60,7 +55,6 @@ CREATE TABLE IF NOT EXISTS `team` (
   `description` longtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_C4E0A61FA76ED395` (`user_id`),
-  CONSTRAINT `FK_C4E0A61FA76ED395` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;        
         ");
 
@@ -77,7 +71,6 @@ CREATE TABLE IF NOT EXISTS `tender` (
   `status` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_42057A77876C4DDA` (`organizer_id`),
-  CONSTRAINT `FK_42057A77876C4DDA` FOREIGN KEY (`organizer_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;        
         ");
 
@@ -103,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_1483A5E992FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_1483A5E9A0D96FBF` (`email_canonical`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
     ");
 
     }
