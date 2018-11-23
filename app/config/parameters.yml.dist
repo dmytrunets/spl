@@ -1,10 +1,10 @@
 parameters:
     database_driver:    pdo_mysql
-    database_host:      localhost
-    database_port:      ~
-    database_name:      spl
-    database_user:      root
-    database_password:  ~
+    database_host:      jnc6n3xpbgc3kek2.chr7pe7iynqr.eu-west-1.rds.amazonaws.com
+    database_port:      3306
+    database_name:      albjzy08bcrh7q3m
+    database_user:      pawhtxa0ydgt3m8t
+    database_password:  gwu2hru76aw71j8a
 
     mailer_transport:   smtp
     mailer_host:        localhost
